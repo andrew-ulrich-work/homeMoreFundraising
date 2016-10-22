@@ -11,7 +11,7 @@
   <style>
   #map {
     width: 100%;
-  	height: 800px;
+  	height: 600px;
   }
 	span.available { 
 		font-weight: bold;
@@ -25,7 +25,7 @@
 	 span.title {
 	 	font-size:14px;
 	 	font-weight: bold;
-		color: #00008B;
+		color: #373a3c;
 	 }
   </style>
 
@@ -74,7 +74,7 @@
         	if(!populated){
        	 	var marker = new google.maps.Marker({
             	position: center,
-            	icon: pinSymbol('yellow'),
+            	icon: pinSymbol('#0275d8'),
              	map: map,
        	 		index: i
            	});
@@ -88,11 +88,11 @@
 
      		if(!populated){
         	var capCircle = new google.maps.Circle({
-                strokeColor: '#FF0000',
+                strokeColor: '#f5f5f5',
                 strokeOpacity: 0.8,
                 strokeWeight: 2,
-                fillColor: '#FF0000',
-                fillOpacity: 0.1,
+                fillColor: '#f5f5f5',
+                fillOpacity: 0.7,
                 map: map,
                 center: cocs[i].location,
                 radius: (cocs[i].capacity * 10)
@@ -101,10 +101,10 @@
         	capCircles[i] = capCircle;
         	
         	var takenCircle = new google.maps.Circle({
-                strokeColor: '#0000FF',
+                strokeColor: '#373a3c',
                 strokeOpacity: 0.8,
                 strokeWeight: 2,
-                fillColor: '#0000FF',
+                fillColor: '#373a3c',
                 fillOpacity: 0.5,
                 map: map,
                 center: cocs[i].location,
@@ -171,7 +171,7 @@
             path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
             fillColor: color,
             fillOpacity: .7,
-            strokeColor: '#000',
+            strokeColor: '#0275d8',
             strokeWeight: 1,
             scale: 1,
             labelOrigin: new google.maps.Point(0,-29)
