@@ -28,7 +28,7 @@ module.exports = [{
                 mode: 'try',
                 strategy: 'session'
             },
-            plugins: {
+            plugins: { 
                 'hapi-auth-cookie': {
                     redirectTo: false
                 }
@@ -36,6 +36,25 @@ module.exports = [{
             handler: function(request, reply) {
                 if (request.auth.isAuthenticated) {
                     return reply.view('settings')
+                }
+            }
+        }
+    }, {
+        method: 'GET',
+        path: '/timeline',
+        config: {
+            auth: {
+                mode: 'try',
+                strategy: 'session'
+            },
+            plugins: {
+                'hapi-auth-cookie': {
+                    redirectTo: false
+                }
+            },
+            handler: function(request, reply) {
+                if (request.auth.isAuthenticated) {
+                    return reply.view('timeline')
                 }
             }
         }
