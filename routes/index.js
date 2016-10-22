@@ -5,4 +5,9 @@ var prevention = require('./prevention');
 var shelter = require('./shelter');
 var referral = require('./referral');
 var analytics = require('./analytics');
-module.exports = [].concat(static, roots, auth, prevention, shelter, referral, analytics);
+
+/** API routes */
+var twilio = require('./api/twilio');
+var threads = require('./api/threads');
+
+module.exports = [].concat(static, roots, auth, twilio, threads, prevention, shelter, referral, analytics);
