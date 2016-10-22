@@ -1,5 +1,6 @@
 var Users = require('../users-db')
 var Bcrypt = require('bcrypt')
+var Boom = require('boom')
 
 module.exports = [{
     method: 'GET',
