@@ -3,91 +3,201 @@
     <div class="row">
         {{> sidebar}}
         <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main">
-            <section class="row">
-                <div class="col-xs-12">
-                    <h1>
-                        Create Shelter
-                    </h1>
-                </div>
-            </section>
-            <section class="row">
-                <div class="col-md-6">
-                    <h3 class="dark-grey">
-                        Registration
-                    </h3>
-                    <div class="form-group col-lg-12">
-                        <label>
-                            Facility Name
-                        </label>
-                        <input class="form-control" id="" name="" type="" value="">
-                        </input>
-                    </div>
-                    <div class="form-group col-lg-12">
-                        <label>
-                            Beds
-                        </label>
-                        <input class="form-control" id="" name="" type="" value="">
-                        </input>
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label>
-                            Password
-                        </label>
-                        <input class="form-control" id="" name="" type="password" value="">
-                        </input>
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label>
-                            Repeat Password
-                        </label>
-                        <input class="form-control" id="" name="" type="password" value="">
-                        </input>
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label>
-                            Email Address
-                        </label>
-                        <input class="form-control" id="" name="" type="" value="">
-                        </input>
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label>
-                            Location
-                        </label>
-                        <input class="form-control" id="" name="" type="" value="">
-                        </input>
-                    </div>
-                    <div class="col-sm-6">
-                        <input class="checkbox" type="checkbox"/>
-                        Sign up for our newsletter
-                    </div>
-                    <div class="col-sm-6">
-                        <input class="checkbox" type="checkbox"/>
-                        Send notifications to this email
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h3 class="dark-grey">
-                        Terms and Conditions
-                    </h3>
-                    <p>
-                        By clicking on "Register" you agree to The Company's' Terms and Conditions
-                    </p>
-                    <p>
-                        While rare, prices are subject to change based on exchange rate fluctuations - 
-					should such a fluctuation happen, we may request an additional payment. You have the option to request a full refund or to pay the new price. (Paragraph 13.5.8)
-                    </p>
-                    <p>
-                        Should there be an error in the description or pricing of a product, we will provide you with a full refund (Paragraph 13.5.6)
-                    </p>
-                    <p>
-                        Acceptance of an order by us is dependent on our suppliers ability to provide the product. (Paragraph 13.5.6)
-                    </p>
-                    <button class="btn btn-primary" type="submit">
-                        Register
-                    </button>
-                </div>
-            </section>
+            <div id="map">
         </div>
     </div>
 </div>
+
+  <style>
+  #map {
+    width: 100%;
+  	height: 100%;
+  }
+	span.available { 
+		font-weight: bold;
+		color: green;
+	 }
+ 
+	 span.novacancy { 
+		font-weight: bold;
+	 }
+ 
+	 span.title {
+	 	font-size:14px;
+	 	font-weight: bold;
+		color: #00008B;
+	 }
+  </style>
+
+	<script>
+
+    var map;
+    var infowindow;
+	var populated = false;
+	var cocs;
+    var markers = [];
+    var capCircles =[];
+    var takenCircles=[];
+    var selectedIndex;
+    
+    var one = { name: "Patrick's",
+			capacity: 40,
+			location: {lat: 38.6340, lng: -90.1994},
+			occupancy: {taken: 0, reserved: 5}
+			}
+
+	var two = { name: "Homeless House",
+		capacity: 30, 
+		location: {lat: 38.6190, lng: -90.1994},
+		occupancy:{taken: 0, reserved: 2}
+		}
+
+	var three = { name: "Hotel Motel",
+		capacity: 15,
+		location: {lat: 38.6270, lng: -90.1894},
+		occupancy: {taken: 0, reserved: 0}
+		}
+  
+	cocs = [one, two, three];  
+    
+  	function populateMarkers(cocs){
+  		for(var i=0; i<cocs.length; i++){        	              	
+        	var capacity = cocs[i].capacity;
+        	var taken = cocs[i].occupancy.taken;
+        	var reserved = cocs[i].occupancy.reserved;
+        	var center = cocs[i].location;
+        	
+        	if(markers[i]){
+        		
+        	}
+        	
+        	if(!populated){
+       	 	var marker = new google.maps.Marker({
+            	position: center,
+            	icon: pinSymbol('yellow'),
+             	map: map,
+       	 		index: i
+           	});
+     	 	markers[i] = marker;     
+     		marker.addListener('click', function(event) {   
+     			selectedIndex = this.index;
+   				updateInfoWindow();
+       			infowindow.open(map, markers[this.index]);
+     		});
+        	}
+
+     		if(!populated){
+        	var capCircle = new google.maps.Circle({
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.1,
+                map: map,
+                center: cocs[i].location,
+                radius: (cocs[i].capacity * 10)
+              });
+        	
+        	capCircles[i] = capCircle;
+        	
+        	var takenCircle = new google.maps.Circle({
+                strokeColor: '#0000FF',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#0000FF',
+                fillOpacity: 0.5,
+                map: map,
+                center: cocs[i].location,
+                radius: (cocs[i].occupancy.taken * 10)
+              });
+        	takenCircles[i] = takenCircle;
+     		}
+ 			       	 			
+        	capCircles[i].setRadius(capacity * 10);
+        	takenCircles[i].setRadius(taken * 10);
+        	
+        	/*var cocCircle = new google.maps.Circle({
+                strokeColor: '#0000FF',
+                strokeOpacity: .25,
+                strokeWeight: 2,
+                fillColor: '#0000FF',
+                fillOpacity: 0.25,
+                map: map,
+                center: cocs[i].location,
+                radius: (cocs[i].occupancy.reserved + cocs[i].occupancy.taken) * 10
+              });*/                       
+  		}
+  		
+  		populated = true;
+  	}
+  
+    function doStuff(){	    	
+    	populateMarkers(cocs);	    
+    	updateInfoWindow();
+    	
+    	window.setTimeout(function(){		
+    		var more = false;
+    		for(var i=0; i<cocs.length; i++){
+    			if(cocs[i].occupancy.taken < cocs[i].capacity){
+    				cocs[i].occupancy.taken++;
+    				more = true;
+    			}
+    		}
+    		if(more){
+    			doStuff();
+    		}
+    	}, 500);
+    }
+    
+    function reserve(){
+    	console.log("reserve");
+    }
+    
+    function updateInfoWindow(){
+    	if(typeof selectedIndex !== "undefined"){
+    		var coc = cocs[selectedIndex];
+    		var available = coc.capacity - coc.occupancy.taken;
+    		
+    		if(available > 0){
+   				infowindow.setContent("<span class='title'>" + coc.name + "</span>"+ "</br>" + "total capacity: " + coc.capacity + "</br>" + "remaining: " + available + "</br></br><span class='available'>ROOM AVAILABLE</span>");
+    		} else {
+  				infowindow.setContent("<span class='title'>" + coc.name + "</span>" + "</br>" + "total capacity: " + coc.capacity + "</br>" + "remaining: " + available + "</br></br><span class='novacancy'>NO VACANCY</span>");
+    		}
+    	}
+    }
+    
+    function pinSymbol(color) {
+        return {
+            path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
+            fillColor: color,
+            fillOpacity: .7,
+            strokeColor: '#000',
+            strokeWeight: 1,
+            scale: 1,
+            labelOrigin: new google.maps.Point(0,-29)
+        };
+    }
+    
+    
+      
+      function initMap() {  
+    	var mapCenter = {lat: 38.6270, lng: -90.1994};
+    	  
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: mapCenter,
+          zoom: 14
+        });
+        
+        infowindow = new google.maps.InfoWindow({
+     		 content: "nothing here yet"     		 
+    	}); 
+  		
+  		map.addListener('click', function(event) {
+  			infowindow.close();
+  		});
+         doStuff();          
+      }
+    </script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqz4FuUF6FIJR7ndOabl1ZT10DZkGM654&callback=initMap"
+		async defer></script>
