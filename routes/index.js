@@ -5,4 +5,5 @@ var prevention = require('./prevention');
 var shelter = require('./shelter');
 var referral = require('./referral');
 var analytics = require('./analytics');
-module.exports = [].concat(static, roots, auth, prevention, shelter, referral, analytics);
+var continuum = require('./continuum');
+module.exports = [].concat(static, roots, auth, prevention, shelter, referral, analytics, continuum);
