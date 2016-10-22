@@ -29,3 +29,12 @@
         </div>
     </div>
 </div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+var socket = io('https://floating-thicket-60378.herokuapp.com');
+socket.on('message', function (data) {
+  console.log(data);
+});
+  
+</script>
