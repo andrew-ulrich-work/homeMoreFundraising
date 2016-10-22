@@ -14,7 +14,7 @@ module.exports = [{
         handler: function(request, reply) {
             if (request.auth.isAuthenticated) {
                 var data = {
-                    title: 'Referral',
+                    title: 'Resources',
                     user: request.auth.credentials,
                     role: request.auth.credentials.type,
                     referral: 'active'

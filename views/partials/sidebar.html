@@ -10,22 +10,18 @@
                 </span>
             </a>
         </li>
+        {{#isProvider}}
         <li class="{{{prevention}}}">
             <a class="list-group-item list-group-item-action" href="/prevention">
-                {{#isProvider}}
                 <i aria-hidden="true" class="fa fa-2x fa-users">
                 </i>
-                {{/isProvider}}
-                {{#isClient}}
-                <i aria-hidden="true" class="fa fa-2x fa-user">
-                </i>
-                {{/isClient}}
                 <br/>
                 <span>
-                    Prevention
+                    Cases
                 </span>
             </a>
         </li>
+        {{/isProvider}}
         <li class="{{{shelter}}}">
             <a class="list-group-item list-group-item-action" href="/shelter">
                 {{#isProvider}}
@@ -38,7 +34,7 @@
                 {{/isClient}}
                 <br/>
                 <span>
-                    Shelter
+                    Beds
                 </span>
             </a>
         </li>
@@ -48,13 +44,13 @@
                 </i>
                 <br/>
                 <span>
-                    Referral
+                    Resources
                 </span>
             </a>
         </li>
-         <li class="{{{continuum}}}">
+        <li class="{{{continuum}}}">
             <a class="list-group-item list-group-item-action" href="/continuum">
-                <i class="fa fa-2x fa-university" aria-hidden="true"></i>
+                <i aria-hidden="true" class="fa fa-2x fa-university">
                 </i>
                 <br/>
                 <span>
@@ -62,11 +58,11 @@
                 </span>
             </a>
         </li>
-        
         {{#isProvider}}
         <li class="{{{analytics}}}">
             <a class="list-group-item list-group-item-action" href="/analytics">
-                <i class="fa fa-2x fa-bar-chart" aria-hidden="true"></i>
+                <i aria-hidden="true" class="fa fa-2x fa-bar-chart">
+                </i>
                 <br/>
                 <span>
                     Analytics
@@ -75,4 +71,4 @@
         </li>
         {{/isProvider}}
     </ul>
- </div>
+</div>
