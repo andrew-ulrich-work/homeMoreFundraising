@@ -1,20 +1,29 @@
 var Hapi = require('hapi')
 var Good = require('good')
 var Hoek = require('hoek')
-    /** create a server with a host and port */
+
+/** pull in the models */
+require('./models')
+
+/** create a server with a host and port */
 var server = new Hapi.Server()
 var Routes = require('./routes/index')
-    /** requirements for temlates */
+
+/** requirements for temlates */
 var Vision = require('vision')
 var Inert = require('inert')
 var Handlebars = require('handlebars')
-    /** requirements for basic authentication */
+
+/** requirements for basic authentication */
 var Bcrypt = require('bcrypt')
 var BasicAuth = require('hapi-auth-basic')
 var CookieAuth = require('hapi-auth-cookie')
 var Users = require('./users-db')
 var Path = require('path')
 
+/** connect to mongo */
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/globalhack');
 
 server.connection({
     host: '0.0.0.0',
