@@ -1,4 +1,3 @@
-console.log("HELLO!")
 // Enable popovers everywhere
 $(function () {
   $('[data-toggle="popover"]').popover()
