@@ -7,6 +7,8 @@ var User = mongoose.model('User');
 var Thread = mongoose.model('Thread');
 var Message = mongoose.model('Message');
 
+var websocketConn = require('./../../server').websocketConn;
+
 module.exports = [{
   method: 'POST',
   path: '/report',
@@ -31,6 +33,7 @@ module.exports = [{
         body: message,
       }, function(err) {
         saveBotMessageToThread(number, message, function(err) {
+          
           return reply(err ? 500 : 200);
         });
       });
@@ -113,11 +116,13 @@ var saveBotMessageToThread = function(phone, message, cb) {
 
 var saveBotMessageToExistingThread = function(thread, message, cb) {
   User.findOne({type: 'bot'}).exec(function(err, bot) {
-    Message.create({
+    var data = {
       thread: thread._id,
       author: bot._id,
       message: message
-    }, function(err) {
+    };
+    Message.create(data, function(err) {
+      shipMessageToClient(data);
       cb(err);
     });
   });
@@ -158,11 +163,13 @@ var saveUserMessageToSystem = function(phone, err, message, cb) {
 
           // Save the new message into the proper thread
           function saveMessage(user, thread) {
-            Message.create({
+            var data = {
               thread: thread._id,
               author: user._id,
               message: message
-            }, function(err) {
+            };
+            Message.create(data, function(err) {
+              shipMessageToClient(data);
               cb(err, thread);
             });
           }
@@ -170,6 +177,11 @@ var saveUserMessageToSystem = function(phone, err, message, cb) {
       }
     });
   }
+}
+
+function shipMessageToClient(message) {
+  console.log('emitting message');
+  websocketConn.emit('message', message);
 }
 
 function sanitizeNumber(num) {

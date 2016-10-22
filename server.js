@@ -7,7 +7,6 @@ require('./models')
 
 /** create a server with a host and port */
 var server = new Hapi.Server()
-var Routes = require('./routes/index')
 
 /** requirements for temlates */
 var Vision = require('vision')
@@ -29,6 +28,11 @@ server.connection({
     host: '0.0.0.0',
     port: process.env.PORT || 3000
 })
+
+module.exports.websocketConn = require('socket.io')(server.listener);
+
+/** Attach routes */
+var Routes = require('./routes/index')
 
 let serverOptions = {
     reporters: {
