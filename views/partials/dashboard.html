@@ -1,11 +1,13 @@
 <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main">
-    {{#isContext "provider"}}
-        {{> jumbotron}}
-    {{else}}
-    <h1>
-        Users Dashboard
-    </h1>
-    {{/isContext}}
+    
+    {{#isAdmin}}
+        <h1>Admin Navigation</h1>
+    {{/isAdmin}}
+
+
+    {{> jumbotron}}
+   
+    
     <h2>
         Contextual Form
     </h2>

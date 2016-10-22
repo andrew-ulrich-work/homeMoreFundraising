@@ -38,7 +38,7 @@ module.exports = [{
         },
         handler: function(request, reply) {
             if (request.auth.isAuthenticated) {
-                return reply.view('dashboard')
+                return reply.redirect('/dashboard')
             }
             var username = request.payload.username
             var user = Users[username]
@@ -50,7 +50,7 @@ module.exports = [{
                 if (isValid) {
                     request.server.log('info', 'user authentication successful')
                     request.cookieAuth.set(user);
-                    return reply.view('dashboard')
+                    return reply.redirect('/dashboard')
                 }
                 return reply.view('index')
             })

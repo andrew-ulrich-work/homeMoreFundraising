@@ -107,6 +107,7 @@ server.register([{
         helpersPath: Path.join(__dirname, 'views/helpers'),
         partialsPath: Path.join(__dirname, 'views/partials'),
         layout: 'default',
+        isCached: false
     });
     server.log('info', 'View configuration completed')
 

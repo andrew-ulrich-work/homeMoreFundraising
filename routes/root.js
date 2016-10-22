@@ -13,21 +13,37 @@ module.exports = [{
             },
             handler: function(request, reply) {
                 if (request.auth.isAuthenticated) {
-
-                    var data = {
-                        title: 'This is Index!',
-                        user: request.auth.credentials,
-                        context: request.auth.credentials.type
-                    };
-
-                    return reply.view('dashboard', data)
+                    return reply.redirect('/dashboard');
                 }
-
                 var data = {
                     title: 'This is Index!',
                     context: 'home'
                 };
-                reply.view('index', data)
+                return reply.view('index', data)
+            }
+        }
+    }, {
+        method: 'GET',
+        path: '/dashboard',
+        config: {
+            auth: {
+                mode: 'try',
+                strategy: 'session'
+            },
+            plugins: {
+                'hapi-auth-cookie': {
+                    redirectTo: false
+                }
+            },
+            handler: function(request, reply) {
+                if (request.auth.isAuthenticated) {
+                    var data = {
+                        title: 'This is Index!',
+                        user: request.auth.credentials,
+                        role: request.auth.credentials.type
+                    };
+                    return reply.view('dashboard', data)
+                }
             }
         }
     }, {
@@ -38,7 +54,7 @@ module.exports = [{
                 mode: 'try',
                 strategy: 'session'
             },
-            plugins: { 
+            plugins: {
                 'hapi-auth-cookie': {
                     redirectTo: false
                 }
