@@ -21,7 +21,7 @@ module.exports = [{
         auth: 'session',
         handler: function(request, reply) {
             request.cookieAuth.clear();
-            reply.view('index')
+            reply.redirect('/')
         }
     }
 }, {
