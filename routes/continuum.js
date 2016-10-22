@@ -1,6 +1,6 @@
 module.exports = [{
     method: 'GET',
-    path: '/referral',
+    path: '/continuum',
     config: {
         auth: {
             mode: 'try',
@@ -14,12 +14,12 @@ module.exports = [{
         handler: function(request, reply) {
             if (request.auth.isAuthenticated) {
                 var data = {
-                    title: 'Resources',
+                    title: 'Continuum Members',
                     user: request.auth.credentials,
                     role: request.auth.credentials.type,
-                    referral: 'active'
+                    continuum: 'active'
                 };
-                return reply.view('referral', data, {
+                return reply.view('continuum', data, {
                     layout: 'default'
                 })
             }

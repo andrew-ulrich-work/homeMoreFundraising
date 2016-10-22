@@ -1,9 +1,8 @@
-<div class="col-sm-3 col-md-2 sidebar">
-    {{#isProvider}}
+<div class="col-xs-2 sidebar">
     <ul class="nav nav-sidebar list-group text-xs-center">
         <li class="{{{dashboard}}}">
             <a class="list-group-item list-group-item-action" href="/dashboard">
-                <i aria-hidden="true" class="fa fa-3x fa-dashboard">
+                <i aria-hidden="true" class="fa fa-2x fa-dashboard">
                 </i>
                 <br/>
                 <span>
@@ -11,81 +10,65 @@
                 </span>
             </a>
         </li>
+        {{#isProvider}}
         <li class="{{{prevention}}}">
             <a class="list-group-item list-group-item-action" href="/prevention">
-                <i aria-hidden="true" class="fa fa-3x fa-users">
+                <i aria-hidden="true" class="fa fa-2x fa-users">
                 </i>
                 <br/>
                 <span>
-                    Prevention
+                    Cases
                 </span>
             </a>
         </li>
+        {{/isProvider}}
         <li class="{{{shelter}}}">
             <a class="list-group-item list-group-item-action" href="/shelter">
-                <i aria-hidden="true" class="fa fa-3x fa-building">
+                {{#isProvider}}
+                <i aria-hidden="true" class="fa fa-2x fa-building">
                 </i>
+                {{/isProvider}}
+                {{#isClient}}
+                <i aria-hidden="true" class="fa fa-2x fa-bed">
+                </i>
+                {{/isClient}}
                 <br/>
                 <span>
-                    Shelter
+                    Beds
                 </span>
             </a>
         </li>
         <li class="{{{referral}}}">
             <a class="list-group-item list-group-item-action" href="/referral">
-                <i aria-hidden="true" class="fa fa-3x fa-user-md">
+                <i aria-hidden="true" class="fa fa-2x fa-user-md">
                 </i>
                 <br/>
                 <span>
-                    Referral
+                    Resources
                 </span>
             </a>
         </li>
+        <li class="{{{continuum}}}">
+            <a class="list-group-item list-group-item-action" href="/continuum">
+                <i aria-hidden="true" class="fa fa-2x fa-university">
+                </i>
+                <br/>
+                <span>
+                    Continuum Members
+                </span>
+            </a>
+        </li>
+        {{#isProvider}}
         <li class="{{{analytics}}}">
             <a class="list-group-item list-group-item-action" href="/analytics">
-                <i class="fa fa-3x fa-bar-chart" aria-hidden="true"></i>
+                <i aria-hidden="true" class="fa fa-2x fa-bar-chart">
+                </i>
                 <br/>
                 <span>
                     Analytics
                 </span>
             </a>
         </li>
-        
+        {{/isProvider}}
     </ul>
-    {{/isProvider}}
-
-    {{#isClient}}
-    <ul class="nav nav-sidebar list-group text-xs-center">
-        <li>
-            <a class="list-group-item list-group-item-action" href="#">
-                <i aria-hidden="true" class="fa fa-3x fa-user">
-                </i>
-                <br/>
-                <span>
-                    Prevention
-                </span>
-            </a>
-        </li>
-        <li class="active">
-            <a class="list-group-item list-group-item-action" href="#">
-                <i aria-hidden="true" class="fa fa-3x fa-bed">
-                </i>
-                <br/>
-                <span>
-                    Shelter
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="list-group-item list-group-item-action" href="#">
-                <i aria-hidden="true" class="fa fa-3x fa-user-md">
-                </i>
-                <br/>
-                <span>
-                    Referral
-                </span>
-            </a>
-        </li>
-    </ul>
-    {{/isClient}}
 </div>
