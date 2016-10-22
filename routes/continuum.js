@@ -17,7 +17,7 @@ module.exports = [{
                     title: 'Continuum Members',
                     user: request.auth.credentials,
                     role: request.auth.credentials.type,
-                    analytics: 'active'
+                    continuum: 'active'
                 };
                 return reply.view('continuum', data, {
                     layout: 'default'
