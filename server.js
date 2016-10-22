@@ -17,7 +17,7 @@ var Path = require('path')
 
 
 server.connection({
-    host: '0.0.0.0' || 'localhost',
+    host: '0.0.0.0',
     port: process.env.PORT || 3000
 })
 
