@@ -10,6 +10,10 @@ var data = {
             x: 40,
             y: 10,
             r: 10
+        },{
+            x: 30,
+            y: 28,
+            r: 15
         }],
         backgroundColor: "#FF6384",
         hoverBackgroundColor: "#FF6384",

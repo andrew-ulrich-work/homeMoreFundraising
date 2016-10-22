@@ -13,11 +13,21 @@ module.exports = [{
             },
             handler: function(request, reply) {
                 if (request.auth.isAuthenticated) {
-                    return reply.view('dashboard')
+
+                    var data = {
+                        title: 'This is Index!',
+                        user: request.auth.credentials,
+                        context: request.auth.credentials.type
+                    };
+
+                    return reply.view('dashboard', data)
                 }
-                reply.view('index', {
-                    title: 'Item Title'
-                })
+
+                var data = {
+                    title: 'This is Index!',
+                    context: 'home'
+                };
+                reply.view('index', data)
             }
         }
     }, {

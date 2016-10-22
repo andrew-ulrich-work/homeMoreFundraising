@@ -4,7 +4,15 @@ var users = {
     username: 'future',
     password: '$2a$04$YPy8WdAtWswed8b9MfKixebJkVUhEZxQCrExQaxzhcdR2xMmpSJiG',   // 'studio'
     name: 'Future Studio',
-    id: '1'
+    id: '1',
+    type: 'provider'
+  },
+  user: {
+    username: 'user',
+    password: '$2a$04$YPy8WdAtWswed8b9MfKixebJkVUhEZxQCrExQaxzhcdR2xMmpSJiG',   // 'studio'
+    name: 'User Name',
+    id: '2',
+    type: 'client'
   }
 }
 

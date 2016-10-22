@@ -33,6 +33,6 @@ var myChart = new Chart(ctx, {
                 }
             }]
         },
-        responsive: true
+        responsive: false
     }
 });
