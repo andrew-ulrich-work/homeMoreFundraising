@@ -1,71 +1,91 @@
 <div class="col-sm-3 col-md-2 sidebar">
-    <ul class="nav nav-sidebar">
+    {{#isProvider}}
+    <ul class="nav nav-sidebar list-group text-xs-center">
+        <li class="{{{dashboard}}}">
+            <a class="list-group-item list-group-item-action" href="/dashboard">
+                <i aria-hidden="true" class="fa fa-3x fa-dashboard">
+                </i>
+                <br/>
+                <span>
+                    Dashboard
+                </span>
+            </a>
+        </li>
+        <li class="{{{prevention}}}">
+            <a class="list-group-item list-group-item-action" href="/prevention">
+                <i aria-hidden="true" class="fa fa-3x fa-users">
+                </i>
+                <br/>
+                <span>
+                    Prevention
+                </span>
+            </a>
+        </li>
+        <li class="{{{shelter}}}">
+            <a class="list-group-item list-group-item-action" href="/shelter">
+                <i aria-hidden="true" class="fa fa-3x fa-building">
+                </i>
+                <br/>
+                <span>
+                    Shelter
+                </span>
+            </a>
+        </li>
+        <li class="{{{referral}}}">
+            <a class="list-group-item list-group-item-action" href="/referral">
+                <i aria-hidden="true" class="fa fa-3x fa-user-md">
+                </i>
+                <br/>
+                <span>
+                    Referral
+                </span>
+            </a>
+        </li>
+        <li class="{{{analytics}}}">
+            <a class="list-group-item list-group-item-action" href="/analytics">
+                <i class="fa fa-3x fa-bar-chart" aria-hidden="true"></i>
+                <br/>
+                <span>
+                    Analytics
+                </span>
+            </a>
+        </li>
+        
+    </ul>
+    {{/isProvider}}
+
+    {{#isClient}}
+    <ul class="nav nav-sidebar list-group text-xs-center">
+        <li>
+            <a class="list-group-item list-group-item-action" href="#">
+                <i aria-hidden="true" class="fa fa-3x fa-user">
+                </i>
+                <br/>
+                <span>
+                    Prevention
+                </span>
+            </a>
+        </li>
         <li class="active">
-            <a href="#">
-                Overview
-                <span class="sr-only">
-                    (current)
+            <a class="list-group-item list-group-item-action" href="#">
+                <i aria-hidden="true" class="fa fa-3x fa-bed">
+                </i>
+                <br/>
+                <span>
+                    Shelter
                 </span>
             </a>
         </li>
         <li>
-            <a href="#">
-                Reports
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Analytics
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Export
+            <a class="list-group-item list-group-item-action" href="#">
+                <i aria-hidden="true" class="fa fa-3x fa-user-md">
+                </i>
+                <br/>
+                <span>
+                    Referral
+                </span>
             </a>
         </li>
     </ul>
-    <ul class="nav nav-sidebar">
-        <li>
-            <a href="">
-                Nav item
-            </a>
-        </li>
-        <li>
-            <a href="">
-                Nav item again
-            </a>
-        </li>
-        <li>
-            <a href="">
-                One more nav
-            </a>
-        </li>
-        <li>
-            <a href="">
-                Another nav item
-            </a>
-        </li>
-        <li>
-            <a href="">
-                More navigation
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-sidebar">
-        <li>
-            <a href="">
-                Nav item again
-            </a>
-        </li>
-        <li>
-            <a href="">
-                One more nav
-            </a>
-        </li>
-        <li>
-            <a href="">
-                Another nav item
-            </a>
-        </li>
-    </ul>
+    {{/isClient}}
 </div>

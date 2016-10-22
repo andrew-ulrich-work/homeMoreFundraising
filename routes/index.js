@@ -1,5 +1,7 @@
 var roots = require('./root');
 var static = require('./static');
 var auth = require('./auth');
-
-module.exports = [].concat(static,roots,auth);
+var prevention = require('./prevention');
+var shelter = require('./shelter');
+var analytics = require('./analytics');
+module.exports = [].concat(static, roots, auth, prevention, shelter, analytics);

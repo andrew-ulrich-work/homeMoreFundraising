@@ -16,7 +16,7 @@ module.exports = [{
                     return reply.redirect('/dashboard');
                 }
                 var data = {
-                    title: 'This is Index!',
+                    title: 'Home',
                     context: 'home'
                 };
                 return reply.view('index', data)
@@ -38,9 +38,10 @@ module.exports = [{
             handler: function(request, reply) {
                 if (request.auth.isAuthenticated) {
                     var data = {
-                        title: 'This is Index!',
+                        title: 'Dashboard',
                         user: request.auth.credentials,
-                        role: request.auth.credentials.type
+                        role: request.auth.credentials.type,
+                        dashboard: 'active'
                     };
                     return reply.view('dashboard', data)
                 }
@@ -100,25 +101,6 @@ module.exports = [{
             handler: function(request, reply) {
                 if (request.auth.isAuthenticated) {
                     return reply.view('help')
-                }
-            }
-        }
-    }, {
-        method: 'GET',
-        path: '/charts',
-        config: {
-            auth: {
-                mode: 'try',
-                strategy: 'session'
-            },
-            plugins: {
-                'hapi-auth-cookie': {
-                    redirectTo: false
-                }
-            },
-            handler: function(request, reply) {
-                if (request.auth.isAuthenticated) {
-                    return reply.view('charts')
                 }
             }
         }
