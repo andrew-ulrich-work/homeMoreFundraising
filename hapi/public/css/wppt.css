@@ -1,0 +1,165 @@
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+
+
+.wppt-material .pricing.style-1 .price {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.wppt-material .pricing.style-2 .plan-title {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.wppt-material .pricing.style-3 .plan-title {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 10px 0;
+}
+.wppt-material .pricing.style-3 .price {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.wppt-material .pricing.style-3 .plan-signup-btn {
+  position: absolute;
+  bottom: 80px;
+  right: 15px;
+}
+.wppt-material .pricing .price {
+  padding: 15px 0;
+}
+.wppt-material .pricing .price h4,
+.wppt-material .pricing .plan-title h5 {
+  text-align: center;
+}
+.wppt-material .pricing .price span,
+.wppt-material .pricing .plan-title span {
+  display: inline-block;
+  position: relative;
+}
+.wppt-material .pricing .plan-title span.plan {
+  font-size: 25px;
+  font-weight: 200;
+  color: #fff;
+}
+.wppt-material .pricing .price span.amount {
+  font-size: 50px;
+  font-weight: 100;
+}
+.wppt-material .pricing .price span.period {
+  margin-left: -10px;
+}
+.wppt-material .pricing .price span.currency {
+  letter-spacing: -6px;
+  top: -20px;
+}
+.wppt-material .pricing .price span.currency,
+.wppt-material .pricing .price span.period {
+  font-size: 16px;
+}
+.wppt-material .pricing .collection li.collection-item{
+    padding-right: 25px;
+    padding-left: 12px;
+}
+.wppt-material .pricing .collection li.collection-item:hover {
+  background: #f5f5f5;
+}
+.wppt-material .dark-grey-text {
+  color: #121212;
+}
+.wppt-material img {
+    box-shadow: none;
+    vertical-align: middle;
+}
+.wppt-material button:hover{
+    background-image: none;   
+}
+.wppt-material .btn-large{
+    height: 55.5px !important;
+    width: 55.5px !important;
+    min-width: 100%;
+}
+.wppt-material .pricing ul.collection li{
+    position: relative;
+}
+.wppt-material .pricing ul.collection li.collection-item i.mdi-action-info-outline{
+    position: absolute;
+    top: calc(50% - 11px);
+    right: 15px;
+}
+.wppt-material .white-text *{
+    color: #fff;
+}
+.wppt-material .btn-floating{
+    border-radius:50% !important;
+    padding: 0 !important;
+}
+.wppt-material .btn:not(.btn-floating){
+    padding: 0 2rem !important;
+    font-family: Roboto;
+}
+.wppt-material span.currency,
+.wppt-material span.amount,
+.wppt-material span.period,
+.wppt-material span.plan,
+.wppt-material li.collection-item
+{
+    font-family: Roboto;
+}
+.wppt-material form{
+    margin: 0;
+}
+.wppt-material h4{
+     line-height: 1.1 !important;
+}
+.wppt-material .collection-item img {
+    margin-right: 4px;
+    width: 11px;
+}
