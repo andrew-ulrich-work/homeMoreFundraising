@@ -1,0 +1,122 @@
+[
+  {
+    "DE#": "",
+    "Name": "EmploymentEducationID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "DE#": "",
+    "Name": "ProjectEntryID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "PersonalID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.*",
+    "Name": "InformationDate",
+    "Type": "D",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.24.1",
+    "Name": "LastGradeCompleted",
+    "Type": "I",
+    "List": "4.24.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.25.1",
+    "Name": "SchoolStatus",
+    "Type": "I",
+    "List": "4.25.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.26.2",
+    "Name": "Employed",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.26.A",
+    "Name": "EmploymentType",
+    "Type": "I",
+    "List": "4.26.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.26.B",
+    "Name": "NotEmployedReason",
+    "Type": "I",
+    "List": "4.26.B",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DataCollectionStage",
+    "Type": "I",
+    "List": "5.3.1",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateCreated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateUpdated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "UserID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateDeleted",
+    "Type": "T",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ExportID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match record in Export.csv"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "DE#": "2.1.1",
+    "Name": "OrganizationID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "DE#": "2.1.2",
+    "Name": "OrganizationName",
+    "Type": "S50",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "Name":  "OrganizationCommonName",
+    "Type": "S50",
+    "DE#": "",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "Name":  "DateCreated",
+    "Type": "T",
+    "DE#": "",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "Name":  "DateUpdated",
+    "Type": "T",
+    "DE#": "",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "Name":  "UserID",
+    "Type": "S32",
+    "DE#": "",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "Name":  "DateDeleted",
+    "Type": "T",
+    "DE#": "",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "Name": "ExportID",
+    "Type": "S32",
+    "DE#": "",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match record in Export.csv"
+  }
+]

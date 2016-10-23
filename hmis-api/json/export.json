@@ -1,0 +1,130 @@
+[
+  {
+    "DE#":"",
+    "Name": "ExportID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "DE#":"",
+    "Name": "SourceID",
+    "Type": "S32",
+    "List": "",
+    "Null": "Y",
+    "Notes": "Optional receiver-defined identifier for the export source"
+  },
+  {
+    "DE#":"",
+    "Name": "SourceName",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": "Optional receiver-defined name for the export source"
+  },
+  {
+    "DE#":"",
+    "Name": "SourceContactFirst",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": "The first name of the user generating the export"
+  },
+  {
+    "DE#":"",
+    "Name": "SourceContactLast",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": "The first name of the user generating the export"
+  },
+  {
+    "DE#":"",
+    "Name": "SourceContactPhone",
+    "Type": "S10",
+    "List": "",
+    "Null": "Y",
+    "Notes": "The phone number of the user generating the export"
+  },
+  {
+    "DE#":"",
+    "Name": "SourceContactExtension",
+    "Type": "S5",
+    "List": "Y",
+    "Null": "The",
+    "Notes": "phone extension of the user generating the export"
+  },
+  {
+    "DE#":"",
+    "Name": "SourceContactEmail",
+    "Type": "S70",
+    "List": "Y",
+    "Null": "The",
+    "Notes": "email address of the user generating the export"
+  },
+  {
+    "DE#":"",
+    "Name": "ExportDate",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": "The date and time that the export process was initiated"
+  },
+  {
+    "DE#":"",
+    "Name": "ExportStartDate",
+    "Type": "D",
+    "List": "",
+    "Null": "",
+    "Notes": "The user-entered start date for the export period"
+  },
+  {
+    "DE#":"",
+    "Name": "ExportEndDate",
+    "Type": "D",
+    "List": "",
+    "Null": "",
+    "Notes": "The user-entered end date for the export period; the"
+  },
+  {
+    "DE#":"",
+    "Name": "ExportEnd",
+    "Type": "",
+    "List": "",
+    "Null": "",
+    "Notes": "should be the same as the ExportStart for exports of HIC data."
+  },
+  {
+    "DE#":"",
+    "Name": "SoftwareName",
+    "Type": "S50",
+    "List": "",
+    "Null": "",
+    "Notes": "The name of the software generating the export."
+  },
+  {
+    "DE#":"",
+    "Name": "SoftwareVersion",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": "The version number of the software"
+  },
+  {
+    "DE#":"",
+    "Name": "ExportPeriodType",
+    "Type": "I",
+    "List": "1.1",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#":"",
+    "Name": "ExportDirective",
+    "Type": "I",
+    "List": "1.2",
+    "Null": "Y",
+    "Notes": ""
+  }
+]

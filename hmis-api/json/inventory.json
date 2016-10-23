@@ -1,0 +1,170 @@
+[
+  {
+    "DE#": "",
+    "Name": "InventoryID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "DE#": "",
+    "Name": "ProjectID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match a record in ProjectCoC.csv"
+  },
+  {
+    "DE#": "",
+    "Name": "CoCCode",
+    "Type": "S6",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match a record in ProjectCoC.csv with the same ProjectID"
+  },
+  {
+    "DE#": "2.7.1",
+    "Name": "InformationDate",
+    "Type": "D",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.2",
+    "Name": "HouseholdType",
+    "Type": "I",
+    "List": "2.7.2",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.3",
+    "Name": "BedType",
+    "Type": "I",
+    "List": "2.7.3",
+    "Null": "Y",
+    "Notes": "Null unless [Project.csv].[ProjectType] = 1"
+  },
+  {
+    "DE#": "2.7.4",
+    "Name": "Availability",
+    "Type": "I",
+    "List": "2.7.4",
+    "Null": "Null unless [Project.csv].[ProjectType] = 1",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.5",
+    "Name": "UnitInventory",
+    "Type": "I",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.5",
+    "Name": "BedInventory",
+    "Type": "I",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.A",
+    "Name": "CHBedInventory",
+    "Type": "I",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.A",
+    "Name": "VetBedInventory",
+    "Type": "I",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.A",
+    "Name": "YouthBedInventory",
+    "Type": "I",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.B",
+    "Name": "YouthAgeGroup",
+    "Type": "I",
+    "List": "2.7.B Y",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.6",
+    "Name": "InventoryStartDate",
+    "Type": "D",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.7",
+    "Name": "InventoryEndDate",
+    "Type": "D",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.7.8",
+    "Name": "HMISParticipatingBeds",
+    "Type": "I",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateCreated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateUpdated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "UserID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateDeleted",
+    "Type": "T",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ExportID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match record in Export.csv"
+  }
+]

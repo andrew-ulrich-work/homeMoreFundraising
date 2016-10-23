@@ -1,0 +1,332 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: HMIS API
+# during dev, should point to your local machine
+host: localhost:10010
+# basePath prefixes all resource paths 
+basePath: /
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /getDonationRequest:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: getDonationRequest
+    get:
+      description: Returns a donation request to the caller
+      # used as the method name of the controller
+      operationId: getDonationRequest
+      produces:
+        - application/json
+      parameters:
+        - name: phone
+          in: query
+          description: The phone number attached to the donation request
+          required: false
+          type: string
+          pattern: "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/getDonationRequestsResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /enum:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: enum
+    get:
+      description: Returns an enum request to the caller
+      operationId: getEnumList
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/enumAllResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /getObject:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: getObject
+    get:
+      description: Returns a list of available HUD HMIS-compliant json objects
+      operationId: getObjectList
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: array
+            items:
+              type: string
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /getObjectFormSchema/{objectName}:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: getObject
+    get:
+      description: Returns a list of available HUD HMIS-compliant json objects
+      operationId: getObjectFormSchema
+      produces:
+        - application/json
+      parameters:
+        - name: objectName
+          in: path
+          type: string
+          required: true
+          description: The name of the object you want
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: object
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /getObject/{objectName}:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: getObject
+    get:
+      description: Returns a list of available HUD HMIS-compliant json objects
+      operationId: getObject
+      produces:
+        - application/json
+      parameters:
+        - name: objectName
+          in: path
+          type: string
+          required: true
+          description: The name of the object you want
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: object
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /enum/{label}:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: enum
+    get:
+      description: Returns an enum request to the caller
+      operationId: getEnumByLabel
+      produces:
+        - application/json
+      parameters:
+        - name: label
+          in: path
+          type: string
+          required: true
+          description: The name of the field you want
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/enumResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /donate:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: donate
+    post:
+      description: Receive a donation
+      operationId: handleDonation
+      consumes:
+        - multipart/form-data
+      produces:
+        - application/json
+      parameters:
+        - name: amount
+          in: formData
+          required: true
+          description: The amount in dollars to donate
+          type: integer
+        - name: _id
+          in: formData
+          required: true
+          description: The id of the at risk record
+          type: string
+      responses:
+        "204":
+          description: Donation Accepted
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /follow:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: follow
+    post:
+      description: Follow a friend
+      operationId: follow
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: id
+          in: body
+          required: true
+          description: The id of the friend to follow
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Followed
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /atRisk/{_id}:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: showAtRisk
+    get:
+      description: Returns an at risk person's info
+      operationId: show
+      produces:
+        - application/json
+      parameters:
+        - name: _id
+          in: path
+          type: string
+          required: true
+          description: The id of the at risk person
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/atRiskResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /atRisk:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: showAtRisk
+    get:
+      description: Returns a list of 10 available HUD HMIS-compliant json objects
+      operationId: showAllAtRisk
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/atRiskResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  getDonationRequestsResponse:
+    type: object
+    properties:
+      phone:
+        type: string
+        pattern: "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+      billAmt:
+        type: number
+        minimum: 0
+      dueDate:
+        type: number
+        minimum: 1477145082
+      story:
+        type: string
+    required:
+    - phone
+    - billAmt
+    - dueDate
+    - story
+  enumResponse:
+    type: object
+    properties:
+      name:
+        type: string
+      map:
+        type: object
+  enumAllResponse:
+    type: array
+    items:
+      $ref: "#/definitions/enumResponse"
+  atRiskResponse:
+    type: object
+    properties:
+      _id:
+        type: string
+      fakeName:
+        type: string
+        maxLength: 20
+      description:
+        type: string
+        maxLength: 40
+      followers:
+        type: array
+        items:
+          type: string
+          maxLength: 20
+      stories:
+        type: array
+        items:
+          type: object
+          properties:
+            title:
+              type: string
+            text:
+              type: string
+            amountRaised:
+              type: integer
+              minimum: 0
+              maximum: 1000
+            amountNeeded:
+              type: integer
+              minimum: 0
+            dueDate:
+              type: integer
+              minimum: 0

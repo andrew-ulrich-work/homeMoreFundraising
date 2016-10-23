@@ -1,0 +1,1044 @@
+{
+  "schema": {
+    "ProjectEntryID": {
+      "type": "string",
+      "maxLength": 32
+    },
+    "S32": {},
+    "EntryDate5": {
+      "type": "string",
+      "pattern": "/\\d{4}-\\d{2}-\\d{2}/"
+    },
+    "HouseholdID": {
+      "type": "string",
+      "maxLength": 32
+    },
+    "RelationshipToHoH": {
+      "type": "integer",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "ResidencePrior": {
+      "type": "integer",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "99"
+      ]
+    },
+    "OtherResidencePrior": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "ResidencePriorLengthOfStay": {
+      "type": "integer",
+      "enum": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "8",
+        "9",
+        "10",
+        "11",
+        "99"
+      ]
+    },
+    "DisablingCondition": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "ContinuouslyHomelessOneYear": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "TimesHomelessPastThreeYears": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "MonthsHomelessPastThreeYears": {
+      "type": "integer",
+      "enum": [
+        "7",
+        "8",
+        "9",
+        "99",
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105",
+        "106",
+        "107",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112"
+      ]
+    },
+    "MonthsHomelessThisTime": {
+      "type": "integer"
+    },
+    "StatusDocumented": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "HousingStatus": {
+      "type": "integer",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "DateOfEngagement": {
+      "type": "string",
+      "pattern": "/\\d{4}-\\d{2}-\\d{2}/"
+    },
+    "InPermanentHousing": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "ResidentialMoveInDate": {
+      "type": "string",
+      "pattern": "/\\d{4}-\\d{2}-\\d{2}/"
+    },
+    "DateOfPATHStatus": {
+      "type": "string",
+      "pattern": "/\\d{4}-\\d{2}-\\d{2}/"
+    },
+    "ClientEnrolledInPATH": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "ReasonNotEnrolled": {
+      "type": "integer",
+      "enum": [
+        "1",
+        "2"
+      ]
+    },
+    "WorstHousingSituation": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "PercentAMI": {
+      "type": "integer",
+      "enum": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "LastPermanentStreet": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "LastPermanentCity": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "LastPermanentState": {
+      "type": "string",
+      "maxLength": 2
+    },
+    "LastPermanentZIP": {
+      "type": "string",
+      "maxLength": 5
+    },
+    "AddressDataQuality": {
+      "type": "integer",
+      "enum": [
+        "1",
+        "2",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "DateOfBCPStatus": {
+      "type": "string",
+      "pattern": "/\\d{4}-\\d{2}-\\d{2}/"
+    },
+    "FYSBYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "ReasonNoServices": {
+      "type": "integer",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "SexualOrientation": {
+      "type": "integer",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "FormerWardChildWelfare": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "ChildWelfareYears": {
+      "type": "integer",
+      "enum": []
+    },
+    "ChildWelfareMonths": {
+      "type": "integer"
+    },
+    "FormerWardJuvenileJustice": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "JuvenileJusticeYears": {
+      "type": "integer",
+      "enum": []
+    },
+    "JuvenileJusticeMonths": {
+      "type": "integer"
+    },
+    "HouseholdDynamics": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "SexualOrientationGenderIDYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "SexualOrientationGenderIDFam": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "HousingIssuesYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "HousingIssuesFam": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "SchoolEducationalIssuesYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "SchoolEducationalIssuesFam": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "UnemploymentYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "UnemploymentFam": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "MentalHealthIssuesYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "MentalHealthIssuesFam": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "HealthIssuesYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "HealthIssuesFam": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "PhysicalDisabilityYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "PhysicalDisabilityFam": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "MentalDisabilityYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "MentalDisabilityFam": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "AbuseAndNeglectYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "AbuseAndNeglectFam": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "AlcoholDrugAbuseYouth": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "AlcoholDrugAbuseFam": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "InsufficientIncome": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "ActiveMilitaryParent": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "IncarceratedParent": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "99"
+      ]
+    },
+    "IncarceratedParentStatus": {
+      "type": "integer",
+      "enum": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "ReferralSource": {
+      "type": "integer",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "99"
+      ]
+    },
+    "CountOutreachReferralApproaches": {
+      "type": "integer"
+    },
+    "ExchangeForSexPastThreeMonths": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "CountOfExchangeForSex": {
+      "type": "integer",
+      "enum": []
+    },
+    "AskedOrForcedToExchangeForSex": {
+      "type": "integer",
+      "enum": [
+        "0",
+        "1",
+        "8",
+        "9",
+        "99"
+      ]
+    },
+    "DateCreated": {
+      "type": "string",
+      "pattern": "/\\d{4}-\\d{2}-\\d{2}\\s\\d\\d:\\d\\d:\\d\\d/"
+    },
+    "DateUpdated": {
+      "type": "string",
+      "pattern": "/\\d{4}-\\d{2}-\\d{2}\\s\\d\\d:\\d\\d:\\d\\d/"
+    },
+    "UserID": {
+      "type": "string",
+      "maxLength": 32
+    },
+    "DateDeleted": {
+      "type": "string",
+      "pattern": "/\\d{4}-\\d{2}-\\d{2}\\s\\d\\d:\\d\\d:\\d\\d/"
+    },
+    "ExportID": {
+      "type": "string",
+      "maxLength": 32
+    }
+  },
+  "form": [
+    {
+      "key": "ProjectEntryID",
+      "type": "text"
+    },
+    {
+      "key": "S32"
+    },
+    {
+      "key": "S32"
+    },
+    {
+      "key": "EntryDate5",
+      "type": "date"
+    },
+    {
+      "key": "HouseholdID",
+      "type": "text"
+    },
+    {
+      "key": "RelationshipToHoH",
+      "type": "number"
+    },
+    {
+      "key": "ResidencePrior",
+      "type": "number"
+    },
+    {
+      "key": "OtherResidencePrior",
+      "type": "text"
+    },
+    {
+      "key": "ResidencePriorLengthOfStay",
+      "type": "number"
+    },
+    {
+      "key": "DisablingCondition",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "8": "Client doesn’t know",
+        "9": "Client refused",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "ContinuouslyHomelessOneYear",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "8": "Client doesn’t know",
+        "9": "Client refused",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "TimesHomelessPastThreeYears",
+      "type": "number"
+    },
+    {
+      "key": "MonthsHomelessPastThreeYears",
+      "type": "number"
+    },
+    {
+      "key": "MonthsHomelessThisTime",
+      "type": "number"
+    },
+    {
+      "key": "StatusDocumented",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "HousingStatus",
+      "type": "number"
+    },
+    {
+      "key": "DateOfEngagement",
+      "type": "date"
+    },
+    {
+      "key": "InPermanentHousing",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "ResidentialMoveInDate",
+      "type": "date"
+    },
+    {
+      "key": "DateOfPATHStatus",
+      "type": "date"
+    },
+    {
+      "key": "ClientEnrolledInPATH",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "ReasonNotEnrolled",
+      "type": "number"
+    },
+    {
+      "key": "WorstHousingSituation",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "8": "Client doesn’t know",
+        "9": "Client refused",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "PercentAMI",
+      "type": "number"
+    },
+    {
+      "key": "LastPermanentStreet",
+      "type": "text"
+    },
+    {
+      "key": "LastPermanentCity",
+      "type": "text"
+    },
+    {
+      "key": "LastPermanentState",
+      "type": "text"
+    },
+    {
+      "key": "LastPermanentZIP",
+      "type": "text"
+    },
+    {
+      "key": "AddressDataQuality",
+      "type": "number"
+    },
+    {
+      "key": "DateOfBCPStatus",
+      "type": "date"
+    },
+    {
+      "key": "FYSBYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "ReasonNoServices",
+      "type": "number"
+    },
+    {
+      "key": "SexualOrientation",
+      "type": "number"
+    },
+    {
+      "key": "FormerWardChildWelfare",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "8": "Client doesn’t know",
+        "9": "Client refused",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "ChildWelfareYears",
+      "type": "number"
+    },
+    {
+      "key": "ChildWelfareMonths",
+      "type": "number"
+    },
+    {
+      "key": "FormerWardJuvenileJustice",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "8": "Client doesn’t know",
+        "9": "Client refused",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "JuvenileJusticeYears",
+      "type": "number"
+    },
+    {
+      "key": "JuvenileJusticeMonths",
+      "type": "number"
+    },
+    {
+      "key": "HouseholdDynamics",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "SexualOrientationGenderIDYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "SexualOrientationGenderIDFam",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "HousingIssuesYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "HousingIssuesFam",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "SchoolEducationalIssuesYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "SchoolEducationalIssuesFam",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "UnemploymentYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "UnemploymentFam",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "MentalHealthIssuesYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "MentalHealthIssuesFam",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "HealthIssuesYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "HealthIssuesFam",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "PhysicalDisabilityYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "PhysicalDisabilityFam",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "MentalDisabilityYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "MentalDisabilityFam",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "AbuseAndNeglectYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "AbuseAndNeglectFam",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "AlcoholDrugAbuseYouth",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "AlcoholDrugAbuseFam",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "InsufficientIncome",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "ActiveMilitaryParent",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "IncarceratedParent",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "IncarceratedParentStatus",
+      "type": "number"
+    },
+    {
+      "key": "ReferralSource",
+      "type": "number"
+    },
+    {
+      "key": "CountOutreachReferralApproaches",
+      "type": "number"
+    },
+    {
+      "key": "ExchangeForSexPastThreeMonths",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "8": "Client doesn’t know",
+        "9": "Client refused",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "CountOfExchangeForSex",
+      "type": "number"
+    },
+    {
+      "key": "AskedOrForcedToExchangeForSex",
+      "titleMap": {
+        "0": "No",
+        "1": "Yes",
+        "8": "Client doesn’t know",
+        "9": "Client refused",
+        "99": "Data not collected"
+      }
+    },
+    {
+      "key": "DateCreated",
+      "type": "datetime-local"
+    },
+    {
+      "key": "DateUpdated",
+      "type": "datetime-local"
+    },
+    {
+      "key": "UserID",
+      "type": "text"
+    },
+    {
+      "key": "DateDeleted",
+      "type": "datetime-local"
+    },
+    {
+      "key": "ExportID",
+      "type": "text"
+    }
+  ]
+}

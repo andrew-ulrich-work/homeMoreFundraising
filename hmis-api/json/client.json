@@ -1,0 +1,298 @@
+[
+  {
+    "DE#": "3.13.1",
+    "Name": "PersonalID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "DE#": "3.1.1",
+    "Name": "FirstName",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.1.2",
+    "Name": "MiddleName",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.1.3",
+    "Name": "LastName",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.1.4",
+    "Name": "NameSuffix",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.1.5",
+    "Name": "NameDataQuality",
+    "Type": "I",
+    "List": "3.1.5",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.2.1",
+    "Name": "SSN3",
+    "Type": "S9",
+    "List": "",
+    "Null": "Y",
+    "Notes": "The letter x is the only permissible nonnumeric character and should be used to indicate the position of omitted digits ^[0-9xX]{9}$"
+  },
+  {
+    "DE#": "3.2.2",
+    "Name": "SSNDataQuality",
+    "Type": "I",
+    "List": "3.2.2",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.3.1",
+    "Name": "DOB",
+    "Type": "D",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.3.2",
+    "Name": "DOBDataQuality",
+    "Type": "I",
+    "List": "3.3.2",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.4.1",
+    "Name": "AmIndAKNative",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "",
+    "Notes": "1= American Indian or Alaska Native"
+  },
+  {
+    "DE#": "3.4.1",
+    "Name": "Asian",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "",
+    "Notes": "1= Asian"
+  },
+  {
+    "DE#": "3.4.1",
+    "Name": "BlackAfAmerican",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "",
+    "Notes": "1= Black or African American"
+  },
+  {
+    "DE#": "3.4.1",
+    "Name": "NativeHIOtherPacific",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "",
+    "Notes": "1= Native Hawaiian or Other Pacific Islander"
+  },
+  {
+    "DE#": "3.4.1",
+    "Name": "White",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "",
+    "Notes": "1= White"
+  },
+  {
+    "DE#": "3.4.1",
+    "Name": "RaceNone",
+    "Type": "I",
+    "List": "1.6",
+    "Null": "Y",
+    "Notes": "Non-null only if all other Race fields = 0 or"
+  },
+  {
+    "DE#": "3.5.1",
+    "Name": "Ethnicity",
+    "Type": "I",
+    "List": "3.5.1",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.6.1",
+    "Name": "Gender",
+    "Type": "I",
+    "List": "3.6.1",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.6.A",
+    "Name": "OtherGender",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.7.1",
+    "Name": "VeteranStatus",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "",
+    "Notes": "Export 99 (Data not collected) for all clients"
+  },
+  {
+    "DE#": "4.41.1",
+    "Name": "YearEnteredService",
+    "Type": "I",
+    "List": "",
+    "Null": "Y",
+    "Notes": "Values between 1920 and the current year ^19[2-9]/d|20[0-1]/d$4"
+  },
+  {
+    "DE#": "4.41.2",
+    "Name": "YearSeparated",
+    "Type": "I",
+    "List": "",
+    "Null": "Y",
+    "Notes": "Values between 1920 and the current year ^19[2-9]/d|20[0-1]/d$"
+  },
+  {
+    "DE#": "4.41.3",
+    "Name": "WorldWarII",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.41.4",
+    "Name": "KoreanWar",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.41.5",
+    "Name": "VietnamWar",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.41.6",
+    "Name": "DesertStorm",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.41.7",
+    "Name": "AfghanistanOEF",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.41.8",
+    "Name": "IraqOIF",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.41.9",
+    "Name": "IraqOND",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.41.10",
+    "Name": "OtherTheater",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.41.11",
+    "Name": "MilitaryBranch",
+    "Type": "I",
+    "List": "4.41.11",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.41.12",
+    "Name": "DischargeStatus",
+    "Type": "I",
+    "List": "4.41.12",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateCreated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateUpdated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "UserID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateDeleted",
+    "Type": "T",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ExportID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match record in Export.csv"
+  }
+]

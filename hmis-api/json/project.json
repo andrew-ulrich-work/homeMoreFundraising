@@ -1,0 +1,122 @@
+[
+  {
+    "DE#": "2.2.1",
+    "Name": "ProjectID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "Name": "OrganizationID",
+    "Type": "S32",
+    "DE#": "",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match a record in Organization.csv"
+  },
+  {
+    "DE#": "2.2.2",
+    "Name": "ProjectName",
+    "Type": "S50",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "Name": "ProjectCommonName",
+    "Type": "S50",
+    "DE#": "",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.4.1",
+    "Name": "ContinuumProject",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.4.2",
+    "Name": "ProjectType",
+    "Type": "I",
+    "List": "2.4.2",
+    "Null": "Y",
+    "Notes": "May be null if ContinuumProject <> 1"
+  },
+  {
+    "DE#": "2.4.A",
+    "Name": "ResidentialAffiliation",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": "Null if ProjectType <> 6"
+  },
+  {
+    "DE#": "2.5.1",
+    "Name": "TrackingMethod",
+    "Type": "I",
+    "List": "2.5.1",
+    "Null": "Y",
+    "Notes": "Null if ProjectType <> 1"
+  },
+  {
+    "DE#": "2.9.1",
+    "Name": "TargetPopulation",
+    "Type": "I",
+    "List": "2.9.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "Name": "PITCount",
+    "Type": "I",
+    "DE#": "",
+    "List": "Y",
+    "Null": "(See",
+    "Notes": "explanation under HIC Exports)"
+  },
+  {
+    "Name": "DateCreated",
+    "Type": "T",
+    "DE#": "",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "Name": "DateUpdated",
+    "Type": "T",
+    "DE#": "",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "Name": "UserID",
+    "Type": "S32",
+    "DE#": "",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "Name": "DateDeleted",
+    "Type": "T",
+    "DE#": "",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "Name": "ExportID",
+    "Type": "S32",
+    "DE#": "",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match record in Export.csv"
+  }
+]

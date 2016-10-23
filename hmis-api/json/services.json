@@ -1,0 +1,122 @@
+[
+  {
+    "DE#": "",
+    "Name": "ServicesID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "DE#": "",
+    "Name": "ProjectEntryID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "PersonalID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateProvided",
+    "Type": "D",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "RecordType",
+    "Type": "I",
+    "List": "1.4",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "TypeProvided",
+    "Type": "I",
+    "List": "",
+    "Null": "",
+    "Notes": "For RecordType 12 – list 4.12.2 141 – list 4.14.A 142 – list 4.14.B 143 – list 4.14.C 144 – list 4.14.D 151 – list 4.15.A 152 – list 4.15.B 161 – list 4.16.A 162 – list 4.16.B 200 – list 1.9"
+  },
+  {
+    "DE#": "",
+    "Name": "OtherTypeProvided",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": "Null unless RecordType = 144 and TypeProvided = 6"
+  },
+  {
+    "DE#": "",
+    "Name": "SubTypeProvided",
+    "Type": "I",
+    "List": "",
+    "Null": "Y",
+    "Notes": "Null unless RecordType = 144 and TypeProvided = 3"
+  },
+  {
+    "DE#": "",
+    "Name": "FAAmount",
+    "Type": "M",
+    "List": "",
+    "Null": "Y",
+    "Notes": "Null unless RecordType = 151 or 152"
+  },
+  {
+    "DE#": "",
+    "Name": "ReferralOutcome",
+    "Type": "I",
+    "List": "4.16.A1",
+    "Null": "Y",
+    "Notes": "Null unless RecordType = 161"
+  },
+  {
+    "DE#": "",
+    "Name": "DateCreated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateUpdated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "UserID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateDeleted",
+    "Type": "T",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ExportID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match record in Export.csv"
+  }
+]

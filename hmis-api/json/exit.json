@@ -1,0 +1,226 @@
+[
+  {
+    "DE#": "",
+    "Name": "ExitID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ProjectEntryID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "PersonalID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.11.1",
+    "Name": "ExitDate",
+    "Type": "D",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.12.1",
+    "Name": "Destination",
+    "Type": "I",
+    "List": "3.12.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.12.A",
+    "Name": "OtherDestination",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.18.1",
+    "Name": "AssessmentDisposition",
+    "Type": "I",
+    "List": "4.18.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.18.A",
+    "Name": "OtherDisposition",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.19.1",
+    "Name": "HousingAssessment",
+    "Type": "I",
+    "List": "4.19.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.19.*",
+    "Name": "SubsidyInformation",
+    "Type": "I",
+    "List": "4.19.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.21.1",
+    "Name": "ConnectionWithSOAR",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.36.1",
+    "Name": "WrittenAftercarePlan",
+    "Type": "I",
+    "List": "4.36.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.36.2",
+    "Name": "AssistanceMainstreamBenefits",
+    "Type": "I",
+    "List": "4.36.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.36.3",
+    "Name": "PermanentHousingPlacement",
+    "Type": "I",
+    "List": "4.36.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.36.4",
+    "Name": "TemporaryShelterPlacement",
+    "Type": "I",
+    "List": "4.36.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.36.5",
+    "Name": "ExitCounseling",
+    "Type": "I",
+    "List": "4.36.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.36.6",
+    "Name": "FurtherFollowUpServices",
+    "Type": "I",
+    "List": "4.36.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.36.7",
+    "Name": "ScheduledFollowUpContacts",
+    "Type": "I",
+    "List": "4.36.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.36.8",
+    "Name": "ResourcePackage",
+    "Type": "I",
+    "List": "4.36.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.36.9",
+    "Name": "OtherAftercarePlanOrAction",
+    "Type": "I",
+    "List": "4.36.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.37.1",
+    "Name": "ProjectCompletionStatus",
+    "Type": "I",
+    "List": "4.37.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.37.*",
+    "Name": "EarlyExitReason",
+    "Type": "I",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.38.1",
+    "Name": "FamilyReunificationAchieved",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateCreated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateUpdated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "UserID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateDeleted",
+    "Type": "T",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ExportID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  }
+]
