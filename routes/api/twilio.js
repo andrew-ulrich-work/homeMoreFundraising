@@ -7,6 +7,8 @@ var Thread = mongoose.model('Thread');
 var Message = mongoose.model('Message');
 var websocketConn = require('./../../server').websocketConn;
 
+websocketConn.set('match origin protocol', true);
+
 module.exports = [{
     method: 'POST',
     path: '/report',
