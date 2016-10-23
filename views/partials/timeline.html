@@ -3,10 +3,23 @@
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
+  var id = window.location.href.slice(-24);
+  $.ajax({
+    url: '/users/' + id + '/history'
+  }).done(function(results) {
+    renderConvoBubble(results);
+  });
+
   var socket = io('http://e2e-test.localhost.com:3000');
   socket.on('message', function (data) {
     console.log(data);
-    var className = data.author.type === 'client' ? '' : 'timeline-inverted';
-    $('.timeline').prepend('<li class="' + className + '"><div class="timeline-badge"><i aria-hidden="true" class="fa fa-envelope-o"></i></div><div class="timeline-panel"><div class="timeline-body"><p>' + data.message + '</p></div><p><small class="text-muted"><i aria-hidden="true" class="fa fa-clock-o"></i>' + data.created + '</small></p></div></li>')
+    renderConvoBubble([data]);
   });
+  
+  function renderConvoBubble(arr) {
+    arr.forEach(function(data) {
+        var className = data.author.type === 'client' ? '' : 'timeline-inverted';
+      $('.timeline').prepend('<li class="' + className + '"><div class="timeline-badge"><i aria-hidden="true" class="fa fa-envelope-o"></i></div><div class="timeline-panel"><div class="timeline-body"><p>' + data.message + '</p></div><p><small class="text-muted"><i aria-hidden="true" class="fa fa-clock-o"></i>' + data.created + '</small></p></div></li>');
+    });
+  }
 </script>
