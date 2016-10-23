@@ -44,9 +44,10 @@ module.exports = [{
                     title: 'Cases',
                     user: request.auth.credentials,
                     role: request.auth.credentials.type,
-                    prevention: 'active'
+                    prevention: 'active',
+                    infoUri: request.server.info.uri
                 };
-                request.params.name
+                
                 return reply.view('prevention-single', data, {
                     layout: 'default'
                 })
