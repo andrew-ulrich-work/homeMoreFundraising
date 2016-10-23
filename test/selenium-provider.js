@@ -68,5 +68,29 @@ webdriverio
 
     .click('#navbar > nav > a')
     .pause(med_pause)
+
+    .setValue('#username', 'user')
+    .pause(pause)
     
+    .setValue('#password', 'studio')
+    .pause(pause)
+    
+    .click('#btnSignIn')
+    .pause(med_pause)
+
+    .click('#formNext')
+    .pause(med_pause)
+
+    .setValue('#firstName', 'John')
+    .pause(pause)
+
+    .setValue('#lastName', 'Wayne')
+    .pause(pause)
+    
+    .setValue('#phoneNumber', '123.456.8965')
+    .pause(pause)
+
+    .click('#formSubmit')
+    .pause(med_pause)
+
     .end();
