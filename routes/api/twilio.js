@@ -182,6 +182,7 @@ var saveUserMessageToSystem = function(phone, err, message, cb) {
 }
 
 function shipMessageToClient(message) {
+  message.created = new Date();
   console.log('emitting message');
   websocketConn.emit('message', message);
 }
