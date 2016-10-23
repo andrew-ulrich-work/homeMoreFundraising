@@ -4,90 +4,87 @@
         {{> sidebar}}
         <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main">
             <div id="map">
+            </div>
         </div>
     </div>
-</div>
-
-  <style>
-  #map {
+    <style>
+        #map {
     width: 100%;
-  	height: 600px;
+    height: 600px;
   }
-	span.available { 
-		font-weight: bold;
-		color: green;
-	 }
+  span.available { 
+    font-weight: bold;
+    color: green;
+   }
  
-	 span.novacancy { 
-		font-weight: bold;
-	 }
+   span.novacancy { 
+    font-weight: bold;
+   }
  
-	 span.title {
-	 	font-size:14px;
-	 	font-weight: bold;
-		color: #373a3c;
-	 }
-  </style>
-
-	<script>
-
-    var map;
+   span.title {
+    font-size:14px;
+    font-weight: bold;
+    color: #373a3c;
+   }
+    </style>
+    <script>
+        var map;
     var infowindow;
-	var populated = false;
-	var cocs;
+  var populated = false;
+  var cocs;
     var markers = [];
     var capCircles =[];
     var takenCircles=[];
     var selectedIndex;
     
-    var one = { name: "Patrick's",
-			capacity: 40,
-			location: {lat: 38.6340, lng: -90.1994},
-			occupancy: {taken: 0, reserved: 5}
-			}
+    var one = { name: "St. Patrick Center",
+      capacity: 40,
+      location: {lat: 38.6340, lng: -90.1994},
+      occupancy: {taken: 0, reserved: 5}
+      }
 
-	var two = { name: "Homeless House",
-		capacity: 30, 
-		location: {lat: 38.6190, lng: -90.1994},
-		occupancy:{taken: 0, reserved: 2}
-		}
+  var two = { name: "Almost Home",
+    capacity: 30, 
+    location: {lat: 38.6190, lng: -90.1994},
+    occupancy:{taken: 0, reserved: 2}
+    }
 
-	var three = { name: "Hotel Motel",
-		capacity: 15,
-		location: {lat: 38.6270, lng: -90.1894},
-		occupancy: {taken: 0, reserved: 0}
-		}
+  var three = { name: "Our Lady's Inn",
+    capacity: 15,
+    location: {lat: 38.6270, lng: -90.1894},
+    occupancy: {taken: 0, reserved: 0}
+    }
   
-	cocs = [one, two, three];  
+  cocs = [one, two, three];  
     
-  	function populateMarkers(cocs){
-  		for(var i=0; i<cocs.length; i++){        	              	
-        	var capacity = cocs[i].capacity;
-        	var taken = cocs[i].occupancy.taken;
-        	var reserved = cocs[i].occupancy.reserved;
-        	var center = cocs[i].location;
-        	
-        	if(markers[i]){
-        		
-        	}
-        	
-        	if(!populated){
-       	 	var marker = new google.maps.Marker({
-            	position: center,
-            	icon: pinSymbol('#0275d8'),
-             	map: map,
-       	 		index: i
-           	});
-     	 	markers[i] = marker;     
-     		marker.addListener('click', function(event) {   
-     			selectedIndex = this.index;
-   				updateInfoWindow();
-       			infowindow.open(map, markers[this.index]);
-     		});
-        	}
+    function populateMarkers(cocs){
+      for(var i=0; i<cocs.length; i++){                         
+          var capacity = cocs[i].capacity;
+          var taken = cocs[i].occupancy.taken;
+          var reserved = cocs[i].occupancy.reserved;
+          var center = cocs[i].location;
+          
+          if(markers[i]){
+            
+          }
+          
+          if(!populated){
+          var marker = new google.maps.Marker({
+              position: center,
+              icon: pinSymbol('#0275d8'),
+              map: map,
+            index: i
+            });
+        markers[i] = marker;     
+        marker.addListener('click', function(event) {   
+          selectedIndex = this.index;
+          updateInfoWindow();
+            infowindow.open(map, markers[this.index]);
+        });
+          }
 
-     		if(!populated){
-        	var capCircle = new google.maps.Circle({
+        if(!populated){
+          var capCircle = new google.maps.Circle({
                 strokeColor: '#f5f5f5',
                 strokeOpacity: 0.8,
                 strokeWeight: 2,
@@ -97,10 +94,10 @@
                 center: cocs[i].location,
                 radius: (cocs[i].capacity * 10)
               });
-        	
-        	capCircles[i] = capCircle;
-        	
-        	var takenCircle = new google.maps.Circle({
+          
+          capCircles[i] = capCircle;
+          
+          var takenCircle = new google.maps.Circle({
                 strokeColor: '#373a3c',
                 strokeOpacity: 0.8,
                 strokeWeight: 2,
@@ -110,13 +107,13 @@
                 center: cocs[i].location,
                 radius: (cocs[i].occupancy.taken * 10)
               });
-        	takenCircles[i] = takenCircle;
-     		}
- 			       	 			
-        	capCircles[i].setRadius(capacity * 10);
-        	takenCircles[i].setRadius(taken * 10);
-        	
-        	/*var cocCircle = new google.maps.Circle({
+          takenCircles[i] = takenCircle;
+        }
+                    
+          capCircles[i].setRadius(capacity * 10);
+          takenCircles[i].setRadius(taken * 10);
+          
+          /*var cocCircle = new google.maps.Circle({
                 strokeColor: '#0000FF',
                 strokeOpacity: .25,
                 strokeWeight: 2,
@@ -126,44 +123,44 @@
                 center: cocs[i].location,
                 radius: (cocs[i].occupancy.reserved + cocs[i].occupancy.taken) * 10
               });*/                       
-  		}
-  		
-  		populated = true;
-  	}
+      }
+      
+      populated = true;
+    }
   
-    function doStuff(){	    	
-    	populateMarkers(cocs);	    
-    	updateInfoWindow();
-    	
-    	window.setTimeout(function(){		
-    		var more = false;
-    		for(var i=0; i<cocs.length; i++){
-    			if(cocs[i].occupancy.taken < cocs[i].capacity){
-    				cocs[i].occupancy.taken++;
-    				more = true;
-    			}
-    		}
-    		if(more){
-    			doStuff();
-    		}
-    	}, 500);
+    function doStuff(){       
+      populateMarkers(cocs);      
+      updateInfoWindow();
+      
+      window.setTimeout(function(){   
+        var more = false;
+        for(var i=0; i<cocs.length; i++){
+          if(cocs[i].occupancy.taken < cocs[i].capacity){
+            cocs[i].occupancy.taken++;
+            more = true;
+          }
+        }
+        if(more){
+          doStuff();
+        }
+      }, 1500);
     }
     
     function reserve(){
-    	console.log("reserve");
+      console.log("reserve");
     }
     
     function updateInfoWindow(){
-    	if(typeof selectedIndex !== "undefined"){
-    		var coc = cocs[selectedIndex];
-    		var available = coc.capacity - coc.occupancy.taken;
-    		
-    		if(available > 0){
-   				infowindow.setContent("<span class='title'>" + coc.name + "</span>"+ "</br>" + "total capacity: " + coc.capacity + "</br>" + "remaining: " + available + "</br></br><span class='available'>ROOM AVAILABLE</span>");
-    		} else {
-  				infowindow.setContent("<span class='title'>" + coc.name + "</span>" + "</br>" + "total capacity: " + coc.capacity + "</br>" + "remaining: " + available + "</br></br><span class='novacancy'>NO VACANCY</span>");
-    		}
-    	}
+      if(typeof selectedIndex !== "undefined"){
+        var coc = cocs[selectedIndex];
+        var available = coc.capacity - coc.occupancy.taken;
+        
+        if(available > 0){
+          infowindow.setContent("<span class='title'>" + coc.name + "</span>"+ "</br>" + "total capacity: " + coc.capacity + "</br>" + "remaining: " + available + "</br></br><span class='available'>ROOM AVAILABLE</span>");
+        } else {
+          infowindow.setContent("<span class='title'>" + coc.name + "</span>" + "</br>" + "total capacity: " + coc.capacity + "</br>" + "remaining: " + available + "</br></br><span class='novacancy'>NO VACANCY</span>");
+        }
+      }
     }
     
     function pinSymbol(color) {
@@ -181,23 +178,23 @@
     
       
       function initMap() {  
-    	var mapCenter = {lat: 38.6270, lng: -90.1994};
-    	  
+      var mapCenter = {lat: 38.6270, lng: -90.1994};
+        
         map = new google.maps.Map(document.getElementById('map'), {
           center: mapCenter,
           zoom: 14
         });
         
         infowindow = new google.maps.InfoWindow({
-     		 content: "nothing here yet"     		 
-    	}); 
-  		
-  		map.addListener('click', function(event) {
-  			infowindow.close();
-  		});
+         content: "nothing here yet"         
+      }); 
+      
+      map.addListener('click', function(event) {
+        infowindow.close();
+      });
          doStuff();          
       }
     </script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqz4FuUF6FIJR7ndOabl1ZT10DZkGM654&callback=initMap"
-		async defer></script>
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqz4FuUF6FIJR7ndOabl1ZT10DZkGM654&callback=initMap">
+    </script>
+</div>
