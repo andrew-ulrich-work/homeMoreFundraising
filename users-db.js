@@ -13,6 +13,13 @@ var users = {
     name: 'User Name',
     id: '2',
     type: 'client'
+  },
+  1234567890: {
+    username: '1234567890',
+    password: '$2a$04$YPy8WdAtWswed8b9MfKixebJkVUhEZxQCrExQaxzhcdR2xMmpSJiG',   // 'studio'
+    name: 'Phone Number',
+    id: '3',
+    type: 'client'
   }
 }
 

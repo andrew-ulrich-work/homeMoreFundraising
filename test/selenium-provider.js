@@ -69,7 +69,7 @@ webdriverio
     .click('#navbar > nav > a')
     .pause(med_pause)
 
-    .setValue('#username', 'user')
+    .setValue('#username', '1234567890')
     .pause(pause)
     
     .setValue('#password', 'studio')
