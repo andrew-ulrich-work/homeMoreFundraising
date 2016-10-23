@@ -47,7 +47,9 @@ module.exports = [{
                     prevention: 'active',
                     infoUri: request.server.info.uri
                 };
-                
+                    
+                console.log(request.server.info)
+
                 return reply.view('prevention-single', data, {
                     layout: 'default'
                 })
