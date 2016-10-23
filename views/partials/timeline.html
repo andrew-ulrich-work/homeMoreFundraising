@@ -10,7 +10,7 @@
     renderConvoBubble(results);
   });
 
-  var socket = io("{{{infoUri}}}");
+  var socket = io('{{{infoUri}}}');
   socket.on('message', function (data) {
     console.log(data);
     renderConvoBubble([data]);
