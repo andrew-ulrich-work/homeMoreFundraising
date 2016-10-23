@@ -26,24 +26,24 @@
     </div>
     <div id="fillOut" class="col-xs-6 hidden-xs-up">
         <h5>Fill out the following information and a case manager will reach out to you in the next 15 minutes</h5>
-        <form>
+        <form action="/referral" method="POST">
             <div class="form-group">
                 <label>
                     First Name
                 </label>
-                <input class="form-control" id="firstName" placeholder="First" type="text"/>
+                <input class="form-control" name="firstname" id="firstName" placeholder="First" type="text"/>
             </div>
             <div class="form-group">
                 <label>
                     Last Name
                 </label>
-                <input class="form-control" id="lastName" placeholder="Last" type="text"/>
+                <input class="form-control" name="lastname" id="lastName" placeholder="Last" type="text"/>
             </div>
             <div class="form-group">
                 <label>
                     Phone Number
                 </label>
-                <input class="form-control" id="phoneNumber" placeholder="Phone" type="tel"/>
+                <input class="form-control" name="phonenumber" id="phoneNumber" placeholder="Phone" type="tel"/>
             </div>
             <div class="form-group">
                 
@@ -59,11 +59,11 @@
     
     <hr class="my-2">
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" id="formNext" role="button">
+            <button class="btn btn-primary" id="formNext" role="button">
                 Next
                 <i aria-hidden="true" class="fa fa-chevron-right">
                 </i>
-            </a>
+            </button>
         </p>
     </hr>
 </div>

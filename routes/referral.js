@@ -1,3 +1,5 @@
+var Mongoose = require('mongoose');
+var User = Mongoose.model('User');
 module.exports = [{
     method: 'GET',
     path: '/referral',
@@ -23,6 +25,29 @@ module.exports = [{
                     layout: 'default'
                 })
             }
+        }
+    }
+}, {
+    method: 'POST',
+    path: '/referral',
+    config: {
+        auth: {
+            mode: 'try',
+        },
+        plugins: {
+            'hapi-auth-cookie': {
+                redirectTo: false
+            }
+        },
+        handler: function(request, reply) {
+            User.create({
+                type: 'client',
+                firstname: request.payload.firstname,
+                lastname: request.payload.lastname,
+                phone: request.payload.phonenumber
+            }, function(err, user) {
+                reply.redirect('/shelter')
+            });
         }
     }
 }];
