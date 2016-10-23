@@ -113,10 +113,10 @@
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     NSNumber *strippedAmount = [f numberFromString:[amount stringByReplacingOccurrencesOfString:@"$" withString:@""]];
-    
+    NSString * concatMsg = [NSString stringWithFormat:@"%@%@", @"Please verify the amount you would like to donate: ", amount];
     UIAlertController * alertController = [UIAlertController
                                            alertControllerWithTitle:@"Donate Confirmation"
-                                           message:@"Please verify the amount you would like to donate."
+                                           message: concatMsg
                                            preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *cancelAction = [UIAlertAction
@@ -132,17 +132,20 @@
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action)
                                {
-                                   NSLog(@"OK action");
-                                   NSString *amount = [NSString stringWithFormat:@"$%@", alertController.textFields.firstObject.text];
-                                   [self.scDonateAmount setTitle:amount forSegmentAtIndex:3];
+                                   NSLog(@"%@", strippedAmount);
+                                   Story *firstStory = [self.atRisk.stories firstObject];
+                                   NSNumber *sum = [NSNumber numberWithFloat:([firstStory.amountRaised floatValue] + [strippedAmount floatValue])];
+                                   firstStory.amountRaised = sum;
+                                   [self.tableView reloadData];
+                                   [self updateLabels];
                                }];
     
     [alertController addAction:cancelAction];
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];
     
-    NSDictionary *dict = @{@"amount": strippedAmount, @"_id": self.atRisk._id};
-    [self postDonation:dict];
+//    NSDictionary *dict = @{@"amount": strippedAmount, @"_id": self.atRisk._id};
+//    [self postDonation:dict];
 }
 
 - (IBAction)scDonationAmountPressed:(id)sender {
