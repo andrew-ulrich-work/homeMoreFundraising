@@ -17,23 +17,19 @@ var SurveyMap = {
      'qp1.1':{
         'value':'What would you like to share with potential donors about yourself and your need?',
         'answers':{}
-      }
-     // 'qp1.2':{
-     //    'value':'Are you having trouble paying for your groceries?',
-     //    'answers':['yes', 'no']
-     // },
-     // 'qp1.3':{
-     //    'value':'Do you need legal assistance?',
-     //    'answers':['yes', 'no']
-     // },
-     // 'qp1.4':{
-     //    'value':'Do you need medical assistance?',
-     //    'answers':['yes', 'no']
-     // },
-     // 'qp2':{
-     //    'value':'What is your birthday?',
-     //    'answers':{}
-     // },
+      },
+     'qp1.2':{
+        'value':'Thanks for letting us know. Could we get your name as well?',
+        'answers':{}
+     },
+     'qp1.4':{
+        'value':'Do you have a current address?',
+        'answers':['yes', 'no']
+     },
+     'qp2':{
+        'value':'Thank you. Once your financial need is met we will let you know. If you have questions in meantime, feel free to respond to this message anytime.',
+        'answers':{}
+     },
      // 'qp3':{
      //    'value':'What kind of id do you have?',
      //    'answers':['Drivers License(1)', 'SSN(2)', 'State Id(3)', 'Other(4)']

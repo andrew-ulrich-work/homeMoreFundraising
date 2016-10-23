@@ -12,7 +12,60 @@ var websocketConn = require('./../../server').websocketConn;
 websocketConn.set('match origin protocol', true);
 
 module.exports = [{
-  // This will go away because users will reach out themselves
+  method: 'POST',
+  path: '/missed',
+  config: {
+    auth: {
+      mode: 'try'
+    },
+    plugins: {
+      'hapi-auth-cookie':  {
+        redirectTo: false
+      }
+    }
+  },
+  handler: function(req, reply) {
+    var message = 'Hey Mark, we have not heard from you in over 48 hours and just wanted to make sure everything was ok. You can reach the St. Patrick Center by directly responding to this message or calling us at (314) 802-0700';
+
+    client.messages.create({
+      to: req.payload.phone,
+      from: appNumber,
+      body: message
+    }, function(err) {
+      saveBotMessageToThread(req.payload.phone, message, function(err) {
+        console.log(err);
+        return reply(err ? 500 : 200);
+      });
+    });
+  }
+}, {
+  method: 'POST',
+  path: '/donation',
+  config: {
+    auth: {
+      mode: 'try'
+    },
+    plugins: {
+      'hapi-auth-cookie':  {
+        redirectTo: false
+      }
+    }
+  },
+  handler: function(req, reply) {
+    var message = 'Hey Mark! Your financial assistance for your electricity bills just came in. Please let us know when you want to pick up the funds at a partner location.';
+
+    client.messages.create({
+      to: req.payload.phone,
+      from: appNumber,
+      body: message
+    }, function(err) {
+      saveBotMessageToThread(req.payload.phone, message, function(err) {
+        console.log(err);
+        return reply(err ? 500 : 200);
+      });
+    });
+  }
+}, {
   method: 'POST',
   path: '/report',
   config: {
