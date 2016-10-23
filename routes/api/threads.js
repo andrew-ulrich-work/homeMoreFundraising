@@ -60,7 +60,7 @@ module.exports = [{
     .find({thread: req.params.id})
     .populate({
       path: 'author',
-      select: 'name _id',
+      select: 'name type _id',
     })
     .exec(function(err, results) {
       return reply(results);
