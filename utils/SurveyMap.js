@@ -3,49 +3,45 @@
 var SurveyMap = {
   'prevention':{
      'qp0': {
-       'value':'Explain your story?',
-       'answers':{}
+       'value':'Do you need help paying your utility bill?',
+       'answers':['yes', 'no']
      },
      'qp0.1':{
-       'value':'What is the amount of your need?',
-       'answers':{}
+       'value':'Would you like to publicly share your story to get financial assistance more quickly?',
+       'answers':['yes', 'no']
      },
      'qp1': {
-        'value':'How can I help?',
-        'answers':['utilities(1)','groceries(2)','legal(3)','medical(4)']
+        'value':'What is the dollar amount of your need?',
+        'answers':{}
      },
      'qp1.1':{
-        'value':'Are you having trouble paying your electric bill?',
-        'answers':['yes', 'no']
-     },
+        'value':'What would you like to share with potential donors about yourself and your need?',
+        'answers':{}
+      },
      'qp1.2':{
-        'value':'Are you having trouble paying for your groceries?',
-        'answers':['yes', 'no']
-     },
-     'qp1.3':{
-        'value':'Do you need legal assistance?',
-        'answers':['yes', 'no']
+        'value':'Thanks for letting us know. Could we get your name as well?',
+        'answers':{}
      },
      'qp1.4':{
-        'value':'Do you need medical assistance?',
+        'value':'Do you have a current address?',
         'answers':['yes', 'no']
      },
      'qp2':{
-        'value':'What is your birthday?',
+        'value':'Thank you. Once your financial need is met we will let you know. If you have questions in meantime, feel free to respond to this message anytime.',
         'answers':{}
      },
-     'qp3':{
-        'value':'What kind of id do you have?',
-        'answers':['Drivers License(1)', 'SSN(2)', 'State Id(3)', 'Other(4)']
-     },
-     'qp4':{
-        'value':'Would you like to publicly raise funds?',
-        'answers':['yes','no']
-     },
-     'qp5':{
-       'value':'What is your address?',
-       'answers':{}
-     }
+     // 'qp3':{
+     //    'value':'What kind of id do you have?',
+     //    'answers':['Drivers License(1)', 'SSN(2)', 'State Id(3)', 'Other(4)']
+     // },
+     // 'qp4':{
+     //    'value':'Would you like to publicly raise funds?',
+     //    'answers':['yes','no']
+     // },
+     // 'qp5':{
+     //   'value':'What is your address?',
+     //   'answers':{}
+     // }
    },
    'diversion':{
      'qd0':{
