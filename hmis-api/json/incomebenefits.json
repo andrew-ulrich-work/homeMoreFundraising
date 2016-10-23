@@ -1,0 +1,594 @@
+[
+  {
+    "DE#": "",
+    "Name": "IncomeBenefitsID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Uniqueidentifier"
+  },
+  {
+    "DE#": "",
+    "Name": "ProjectEntryID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "PersonalID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.*",
+    "Name": "InformationDate",
+    "Type": "D",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.2",
+    "Name": "IncomeFromAnySource",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.18",
+    "Name": "TotalMonthlyIncome",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.3",
+    "Name": "Earned",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.A",
+    "Name": "EarnedAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.",
+    "Name": "Unemployment",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.B",
+    "Name": "UnemploymentAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.",
+    "Name": "SSI",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.C",
+    "Name": "SSIAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.",
+    "Name": "SSDI",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.D",
+    "Name": "SSDIAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.7",
+    "Name": "VADisabilityService",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.E",
+    "Name": "VADisabilityServiceAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.8",
+    "Name": "VADisabilityNonService",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.F",
+    "Name": "VADisabilityNonServiceAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.9",
+    "Name": "PrivateDisability",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.G",
+    "Name": "PrivateDisabilityAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.10",
+    "Name": "WorkersComp",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.H",
+    "Name": "WorkersCompAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.11",
+    "Name": "TANF",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.I",
+    "Name": "TANFAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.12",
+    "Name": "GA",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.J",
+    "Name": "GAAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.13",
+    "Name": "SocSecRetirement",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.K",
+    "Name": "SocSecRetirementAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.14",
+    "Name": "Pension",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.L",
+    "Name": "PensionAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.15",
+    "Name": "ChildSupport",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.M",
+    "Name": "ChildSupportAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.16",
+    "Name": "Alimony",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.N",
+    "Name": "AlimonyAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.17",
+    "Name": "OtherIncomeSource",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.O",
+    "Name": "OtherIncomeAmount",
+    "Type": "M+",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.2.P",
+    "Name": "OtherIncomeSourceIdentify",
+    "Type": "S50",
+    "List": "Y",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.3.2",
+    "Name": "BenefitsFromAnySource",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.3.3",
+    "Name": "SNAP",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.3.4",
+    "Name": "WIC",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.3.5",
+    "Name": "TANFChildCare",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.3.6",
+    "Name": "TANFTransportation",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.3.7",
+    "Name": "OtherTANF",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.3.8",
+    "Name": "RentalAssistanceOngoing",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.3.10",
+    "Name": "RentalAssistanceTemp",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.3.9",
+    "Name": "OtherBenefitsSource",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.3.A",
+    "Name": "OtherBenefitsSourceIdentify",
+    "Type": "S50",
+    "List": "Y",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.2",
+    "Name": "InsuranceFromAnySource",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.3",
+    "Name": "Medicaid",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.A",
+    "Name": "NoMedicaidReason",
+    "Type": "I",
+    "List": "4.4.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.4",
+    "Name": "Medicare",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.B",
+    "Name": "NoMedicareReason",
+    "Type": "I",
+    "List": "4.4.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.5",
+    "Name": "SCHIP",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.C",
+    "Name": "NoSCHIPReason",
+    "Type": "I",
+    "List": "4.4.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.6",
+    "Name": "VAMedicalServices",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.S",
+    "Name": "NoVAMedReason",
+    "Type": "I",
+    "List": "4.4.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.7",
+    "Name": "EmployerProvided",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.E",
+    "Name": "NoEmployerProvidedReason",
+    "Type": "I",
+    "List": "4.4.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.8",
+    "Name": "COBRA",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.F",
+    "Name": "NoCOBRAReason",
+    "Type": "I",
+    "List": "4.4.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.9",
+    "Name": "PrivatePay",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.G",
+    "Name": "NoPrivatePayReason",
+    "Type": "I",
+    "List": "4.4.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.10",
+    "Name": "StateHealthIns",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.4.H",
+    "Name": "NoStateHealthInsReason",
+    "Type": "I",
+    "List": "4.4.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.39.2",
+    "Name": "HIVAIDSAssistance",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.39.A",
+    "Name": "NoHIVAIDSAssistanceReason",
+    "Type": "I",
+    "List": "4.39",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.39.3",
+    "Name": "ADAP",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.39.B",
+    "Name": "NoADAPReason",
+    "Type": "I",
+    "List": "4.39",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DataCollectionStage",
+    "Type": "I",
+    "List": "5.3.1",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateCreated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateUpdated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "UserID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateDeleted",
+    "Type": "T",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ExportID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  }
+]

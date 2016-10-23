@@ -1,0 +1,114 @@
+[
+  {
+    "DE#": "",
+    "Name": "SiteID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "DE#": "",
+    "Name": "ProjectID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match a record in ProjectCoC.csv"
+  },
+  {
+    "DE#": "",
+    "Name": "CoCCode",
+    "Type": "S6",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match a record in ProjectCoC.csv with the same ProjectID"
+  },
+  {
+    "DE#": "2.8.1",
+    "Name": "PrincipalSite",
+    "Type": "I",
+    "List": "1.7",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.8.A",
+    "Name": "Geocode1",
+    "Type": "S6",
+    "List": "",
+    "Null": "",
+    "Notes": "Limited to six digits ^[0-9]{6}$"
+  },
+  {
+    "DE#": "2.8.2",
+    "Name": "Address",
+    "Type": "S100",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.8.3",
+    "Name": "City",
+    "Type": "S50",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "2.8.4",
+    "Name": "State",
+    "Type": "S2",
+    "List": "",
+    "Null": "Y",
+    "Notes": "Limited to two letters2 ^[a-zA-Z]{2}$"
+  },
+  {
+    "DE#": "2.8.5",
+    "Name": "ZIP",
+    "Type": "S5",
+    "List": "",
+    "Null": "Y",
+    "Notes": "Limited to five digits ^[0-9]{5}$"
+  },
+  {
+    "DE#": "",
+    "Name": "DateCreated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateUpdated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "UserID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateDeleted",
+    "Type": "T",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ExportID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match record in Export.csv"
+  }
+]

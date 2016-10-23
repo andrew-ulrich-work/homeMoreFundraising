@@ -1,0 +1,138 @@
+[
+  {
+    "DE#": "",
+    "Name": "HealthAndDVID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "DE#": "",
+    "Name": "ProjectEntryID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "PersonalID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.*",
+    "Name": "InformationDate",
+    "Type": "D",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.11.2",
+    "Name": "DomesticViolenceVictim",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.11.A",
+    "Name": "WhenOccurred",
+    "Type": "I",
+    "List": "4.11.A",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.27.1",
+    "Name": "GeneralHealthStatus",
+    "Type": "I",
+    "List": "4.27.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.28.1",
+    "Name": "DentalHealthStatus",
+    "Type": "I",
+    "List": "4.27.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.29.1",
+    "Name": "MentalHealthStatus",
+    "Type": "I",
+    "List": "4.27.1",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.30.1",
+    "Name": "PregnancyStatus",
+    "Type": "I",
+    "List": "1.8",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "4.30.A",
+    "Name": "DueDate",
+    "Type": "D",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DataCollectionStage",
+    "Type": "I",
+    "List": "5.3.1",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateCreated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateUpdated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "UserID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateDeleted",
+    "Type": "T",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ExportID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match Export.csv.ExportID"
+  }
+]

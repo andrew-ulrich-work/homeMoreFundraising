@@ -1,0 +1,98 @@
+[
+  {
+    "DE#": "",
+    "Name": "EnrollmentCoCID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "DE#": "",
+    "Name": "ProjectEntryID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ProjectID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match a record in ProjectCoC.csv"
+  },
+  {
+    "DE#": "",
+    "Name": "PersonalID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.16.1",
+    "Name": "InformationDate",
+    "Type": "D",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "3.16.2",
+    "Name": "CoCCode",
+    "Type": "S6",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match a record in ProjectCoC.csv with the same ProjectID ^[A-Za-z]{2}-(0-9){3}$"
+  },
+  {
+    "DE#": "",
+    "Name": "DataCollectionStage",
+    "Type": "I",
+    "List": "5.3.1",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateCreated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateUpdated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "UserID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateDeleted",
+    "Type": "T",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ExportID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  }
+]

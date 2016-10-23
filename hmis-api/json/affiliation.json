@@ -1,0 +1,66 @@
+[
+  {
+    "DE#": "",
+    "Name": "AffliationID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Unique identifier"
+  },
+  {
+    "DE#": "",
+    "Name": "ProjectID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match a record in Project.csv where ProjectType = 6 and"
+  },
+  {
+    "DE#": "2.4.B",
+    "Name": "ResProjectID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match a record in Project.csv where ProjectType =2"
+  },
+  {
+    "DE#": "",
+    "Name": "DateCreated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateUpdated",
+    "Type": "T",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "UserID",
+    "Type": "S32",
+    "List": "",
+    "Null": "",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "DateDeleted",
+    "Type": "T",
+    "List": "",
+    "Null": "Y",
+    "Notes": ""
+  },
+  {
+    "DE#": "",
+    "Name": "ExportID",
+    "Type": "S",
+    "List": "",
+    "Null": "",
+    "Notes": "Must match record in Export.csv"
+  }
+]
