@@ -1,7 +1,7 @@
 var roots = require('./root');
 var static = require('./static');
 var auth = require('./auth');
-var prevention = require('./prevention');
+var cases = require('./cases');
 var shelter = require('./shelter');
 var referral = require('./referral');
 var analytics = require('./analytics');
@@ -11,5 +11,5 @@ var continuum = require('./continuum');
 var twilio = require('./api/twilio');
 var threads = require('./api/threads');
 
-module.exports = [].concat(static, roots, auth, twilio, threads, prevention, shelter, referral, analytics, continuum);
+module.exports = [].concat(static, roots, auth, twilio, threads, cases, shelter, referral, analytics, continuum);
 
