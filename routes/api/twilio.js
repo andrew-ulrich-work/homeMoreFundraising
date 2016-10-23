@@ -122,6 +122,7 @@ var saveBotMessageToExistingThread = function(thread, message, cb) {
       message: message
     };
     Message.create(data, function(err) {
+      data.author = bot;
       shipMessageToClient(data);
       cb(err);
     });
@@ -169,6 +170,7 @@ var saveUserMessageToSystem = function(phone, err, message, cb) {
               message: message
             };
             Message.create(data, function(err) {
+              data.author = user;
               shipMessageToClient(data);
               cb(err, thread);
             });

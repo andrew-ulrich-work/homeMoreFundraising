@@ -21,8 +21,8 @@ var Users = require('./users-db')
 var Path = require('path')
 
 /** connect to mongo */
-// var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/globalhack');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://master:globalhack6@ds063946.mlab.com:63946/globalhack');
 
 server.connection({
     host: '0.0.0.0',
