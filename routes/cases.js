@@ -1,6 +1,6 @@
 module.exports = [{
     method: 'GET',
-    path: '/prevention',
+    path: '/cases',
     config: {
         auth: {
             mode: 'try',
@@ -27,7 +27,7 @@ module.exports = [{
     }
 },{
     method: 'GET',
-    path: '/prevention/{uuid}',
+    path: '/cases/{uuid}',
     config: {
         auth: {
             mode: 'try',
