@@ -52,7 +52,7 @@ module.exports = [{
     }
   },
   handler: function(req, reply) {
-    var message = 'Hey Mark! Your financial assistance for your electricity bills just came in. Please let us know when you want to pick up the funds at a partner location.';
+    var message = 'Hey Mark! Your financial assistance for your electricity bills just came in. Please let us know when you want to pick up the funds at a partner location. The closest to you is probably 800 N Tucker Blvd, St. Louis, MO 63101';
 
     client.messages.create({
       to: req.payload.phone,
