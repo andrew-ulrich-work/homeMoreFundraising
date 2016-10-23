@@ -47,4 +47,22 @@ module.exports = [{
       });
     });
   }
+}, {
+  method: 'DELETE',
+  path: '/users/{id}',
+  config: {
+    auth: {
+      mode: 'try'
+    },
+    plugins: {
+      'hapi-auth-cookie':  {
+        redirectTo: false
+      }
+    }
+  },
+  handler: function(req, reply) {
+    User.remove({_id: req.params.id}).exec(function(err) {
+      return reply(err);
+    });
+  }
 }]
