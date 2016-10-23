@@ -45,7 +45,7 @@ module.exports = [{
                     user: request.auth.credentials,
                     role: request.auth.credentials.type,
                     prevention: 'active',
-                    infoUri: request.server.info.uri
+                    infoUri: request.server.info.uri.replace('http','https')
                 };
                     
                 console.log(request.server.info)
