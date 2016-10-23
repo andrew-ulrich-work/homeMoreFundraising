@@ -138,6 +138,7 @@
                                    firstStory.amountRaised = sum;
                                    [self.tableView reloadData];
                                    [self updateLabels];
+                                   [self showPopupWithStyle:CNPPopupStyleCentered];
                                }];
     
     [alertController addAction:cancelAction];
@@ -188,7 +189,6 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/donate"
                                            parameters:dict
                                               success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                  [self showPopupWithStyle:CNPPopupStyleCentered];
                                                   NSLog(@"success!");
                                               }
                                               failure:^(RKObjectRequestOperation *operation, NSError *error) {
