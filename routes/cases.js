@@ -14,7 +14,7 @@ module.exports = [{
         handler: function(request, reply) {
             if (request.auth.isAuthenticated) {
                 var data = {
-                    title: 'This is Index!',
+                    title: 'Cases',
                     user: request.auth.credentials,
                     role: request.auth.credentials.type,
                     prevention: 'active'
@@ -41,12 +41,13 @@ module.exports = [{
         handler: function(request, reply) {
             if (request.auth.isAuthenticated) {
                 var data = {
-                    title: 'This is Index!',
+                    title: 'Cases',
                     user: request.auth.credentials,
                     role: request.auth.credentials.type,
-                    prevention: 'active'
+                    prevention: 'active',
+                    infoUri: request.server.info.uri
                 };
-                request.params.name
+                    
                 return reply.view('prevention-single', data, {
                     layout: 'default'
                 })

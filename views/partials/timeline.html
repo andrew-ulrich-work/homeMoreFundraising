@@ -10,7 +10,7 @@
     renderConvoBubble(results);
   });
 
-  var socket = io('http://e2e-test.localhost.com:3000');
+  var socket = io.connect('https://stark-thicket-79965.herokuapp.com/');
   socket.on('message', function (data) {
     console.log(data);
     renderConvoBubble([data]);
