@@ -23,6 +23,11 @@ var Path = require('path')
 /** connect to mongo */
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://master:globalhack6@ds063946.mlab.com:63946/globalhack');
+var Response = mongoose.model('Response');
+
+Response.remove({}, function(err) { 
+   console.log('response collection wiped');
+});
 
 server.connection({
     host: '0.0.0.0',
