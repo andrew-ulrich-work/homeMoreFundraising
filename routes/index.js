@@ -10,6 +10,7 @@ var continuum = require('./continuum');
 /** API routes */
 var twilio = require('./api/twilio');
 var threads = require('./api/threads');
+var users = require('./api/users');
 
-module.exports = [].concat(static, roots, auth, twilio, threads, prevention, shelter, referral, analytics, continuum);
+module.exports = [].concat(static, roots, auth, twilio, threads, users, prevention, shelter, referral, analytics, continuum);
 
