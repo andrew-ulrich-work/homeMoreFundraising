@@ -10,7 +10,7 @@
     renderConvoBubble(results);
   });
 
-  var socket = io('{{{infoUri}}}');
+  var socket = io('https://stark-thicket-79965.herokuapp.com/');
   socket.on('message', function (data) {
     console.log(data);
     renderConvoBubble([data]);
