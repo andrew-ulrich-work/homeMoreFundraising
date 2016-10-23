@@ -1,6 +1,7 @@
 var client = require('twilio')('AC00b51b98c6f3ab5f17cd49da6e8ad1bf', 'a9c75512745ede9cd6558d647a643e87');
 var appNumber = '+15042651484';
 
+var SurveyManager = require('./../../utils/SurveyManager');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
@@ -10,6 +11,7 @@ var Message = mongoose.model('Message');
 var websocketConn = require('./../../server').websocketConn;
 
 module.exports = [{
+  // This will go away because users will reach out themselves
   method: 'POST',
   path: '/report',
   config: {
@@ -24,17 +26,20 @@ module.exports = [{
   },
   handler: function(req, reply) {
     var number = sanitizeNumber(req.payload.phone);
-    console.log('here we are', req.payload)
-    if(req.payload.phone && req.payload.issue === 'payment:missed') {
-      var message = 'It looks like you have missed a few utility bills. Are you in need of some help? Reply yes or no.';
-      client.messages.create({
-        to: number,
-        from: appNumber,
-        body: message,
-      }, function(err) {
-        saveBotMessageToThread(number, message, function(err) {
-          
-          return reply(err ? 500 : 200);
+    var sm = new SurveyManager();
+
+    if(req.payload.phone) {
+      sm.getNextQuestion(number, 'PREVENTION', function(question) {
+
+        client.messages.create({
+          to: number,
+          from: appNumber,
+          body: question.value,
+        }, function(err) {
+          saveBotMessageToThread(number, question.value, function(err) {
+            console.log(err);
+            return reply(err ? 500 : 200);
+          });
         });
       });
     } else {
@@ -56,21 +61,35 @@ module.exports = [{
   },
   handler: function(req, reply) {
     var number = sanitizeNumber(req.payload.From);
+    var sm = new SurveyManager();
 
     // Save the incoming message into the system
     saveUserMessageToSystem(number, null, req.payload.Body, function(err, thread) {
 
-      // At this point -- figure out what the response should be
-      var response = 'Echo: ' + req.payload.Body;
+      // Do something with the response
+      sm.getCurrentQuestionIdForResponse(number, 'PREVENTION', function(id) {
 
-      // Now send out the response
-      client.messages.create({ 
-        to: number,
-        from: appNumber,
-        body: response
-      }, function(err) {
-        saveBotMessageToExistingThread(thread, response, function(err) {
-          return reply(err ? 500 : 200);
+        sm.addResponse(number, id, req.payload.Body, function(err) {
+          
+          // At this point -- figure out what the response should be
+          sm.getNextQuestion(number, 'PREVENTION', function(question) {
+            
+            if(question) {
+              console.log('the next question is', question);
+              // Now send out the response
+              client.messages.create({
+                to: number,
+                from: appNumber,
+                body: question.value
+              }, function(err) {
+                saveBotMessageToExistingThread(thread, question.value, function(err) {
+                  return reply(err ? 500 : 200);
+                });
+              });
+            } else {
+              return reply(200);
+            }
+          })
         });
       });
     });
