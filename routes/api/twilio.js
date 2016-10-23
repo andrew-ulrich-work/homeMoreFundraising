@@ -32,16 +32,20 @@ module.exports = [{
     if(req.payload.phone) {
       sm.getNextQuestion(number, 'PREVENTION', function(question) {
 
-        client.messages.create({
-          to: number,
-          from: appNumber,
-          body: question.value,
-        }, function(err) {
-          saveBotMessageToThread(number, question.value, function(err) {
-            console.log(err);
-            return reply(err ? 500 : 200);
+        if(question) {
+          client.messages.create({
+            to: number,
+            from: appNumber,
+            body: question.value,
+          }, function(err) {
+            saveBotMessageToThread(number, question.value, function(err) {
+              console.log(err);
+              return reply(err ? 500 : 200);
+            });
           });
-        });
+        } else {
+          return reply(200);
+        }
       });
     } else {
       return reply(400);
