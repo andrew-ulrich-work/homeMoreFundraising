@@ -10,7 +10,7 @@
     renderConvoBubble(results);
   });
 
-  var socket = io.connect('https://stark-thicket-79965.herokuapp.com/');
+  var socket = io.connect('https://floating-thicket-60378.herokuapp.com/');
   socket.on('message', function (data) {
     console.log(data);
     renderConvoBubble([data]);
