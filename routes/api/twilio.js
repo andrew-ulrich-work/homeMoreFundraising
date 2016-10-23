@@ -7,9 +7,6 @@ var Thread = mongoose.model('Thread');
 var Message = mongoose.model('Message');
 var websocketConn = require('./../../server').websocketConn;
 
-    websocketConn.set("transports", ['websocket', 'polling']);
-    websocketConn.set("polling duration", 10);
-
 module.exports = [{
     method: 'POST',
     path: '/report',
