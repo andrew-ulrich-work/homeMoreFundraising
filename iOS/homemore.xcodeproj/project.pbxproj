@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8901CC5A9BA80EF097EE37D /* libPods-homemore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A6ECBB55E4C64172CB6A0E /* libPods-homemore.a */; };
+		BE163DC91DBB38190034161A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE163DC81DBB38190034161A /* main.m */; };
+		BE163DCC1DBB38190034161A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE163DCB1DBB38190034161A /* AppDelegate.m */; };
+		BE163DD21DBB38190034161A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE163DD01DBB38190034161A /* Main.storyboard */; };
+		BE163DD51DBB38190034161A /* homemore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE163DD31DBB38190034161A /* homemore.xcdatamodeld */; };
+		BE163DD71DBB38190034161A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE163DD61DBB38190034161A /* Assets.xcassets */; };
+		BE163DDA1DBB38190034161A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE163DD81DBB38190034161A /* LaunchScreen.storyboard */; };
+		BE189DAC1DBBD319000ABBC7 /* StoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE189DAB1DBBD319000ABBC7 /* StoryListViewController.m */; };
+		BE189DAF1DBBD845000ABBC7 /* StoryOverviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE189DAE1DBBD845000ABBC7 /* StoryOverviewTableViewCell.m */; };
+		BE189DB21DBBE2AA000ABBC7 /* StoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE189DB11DBBE2AA000ABBC7 /* StoryDetailViewController.m */; };
+		BE189DB51DBBFBE7000ABBC7 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE189DB41DBBFBE7000ABBC7 /* NetworkController.m */; };
+		BE189DB91DBBFE5B000ABBC7 /* AtRisk.m in Sources */ = {isa = PBXBuildFile; fileRef = BE189DB81DBBFE5B000ABBC7 /* AtRisk.m */; };
+		BE189DBC1DBBFE72000ABBC7 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = BE189DBB1DBBFE72000ABBC7 /* Story.m */; };
+		BE189DC21DBC2BF1000ABBC7 /* StoryDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE189DC11DBC2BF1000ABBC7 /* StoryDetailTableViewCell.m */; };
+		BE189DC51DBC5D7A000ABBC7 /* UtilFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE189DC41DBC5D7A000ABBC7 /* UtilFunctions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BE163DC41DBB38190034161A /* homemore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homemore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE163DC81DBB38190034161A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE163DCA1DBB38190034161A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE163DCB1DBB38190034161A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE163DD11DBB38190034161A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE163DD41DBB38190034161A /* homemore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = homemore.xcdatamodel; sourceTree = "<group>"; };
+		BE163DD61DBB38190034161A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE163DD91DBB38190034161A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE163DDB1DBB38190034161A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE189DAA1DBBD319000ABBC7 /* StoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryListViewController.h; sourceTree = "<group>"; };
+		BE189DAB1DBBD319000ABBC7 /* StoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryListViewController.m; sourceTree = "<group>"; };
+		BE189DAD1DBBD845000ABBC7 /* StoryOverviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryOverviewTableViewCell.h; sourceTree = "<group>"; };
+		BE189DAE1DBBD845000ABBC7 /* StoryOverviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryOverviewTableViewCell.m; sourceTree = "<group>"; };
+		BE189DB01DBBE2AA000ABBC7 /* StoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryDetailViewController.h; sourceTree = "<group>"; };
+		BE189DB11DBBE2AA000ABBC7 /* StoryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryDetailViewController.m; sourceTree = "<group>"; };
+		BE189DB31DBBFBE7000ABBC7 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
+		BE189DB41DBBFBE7000ABBC7 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
+		BE189DB71DBBFE5B000ABBC7 /* AtRisk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtRisk.h; sourceTree = "<group>"; };
+		BE189DB81DBBFE5B000ABBC7 /* AtRisk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtRisk.m; sourceTree = "<group>"; };
+		BE189DBA1DBBFE72000ABBC7 /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		BE189DBB1DBBFE72000ABBC7 /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
+		BE189DC01DBC2BF1000ABBC7 /* StoryDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryDetailTableViewCell.h; sourceTree = "<group>"; };
+		BE189DC11DBC2BF1000ABBC7 /* StoryDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryDetailTableViewCell.m; sourceTree = "<group>"; };
+		BE189DC31DBC5D7A000ABBC7 /* UtilFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilFunctions.h; sourceTree = "<group>"; };
+		BE189DC41DBC5D7A000ABBC7 /* UtilFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilFunctions.m; sourceTree = "<group>"; };
+		C172709733FC58426377FEF0 /* Pods-homemore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homemore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-homemore/Pods-homemore.debug.xcconfig"; sourceTree = "<group>"; };
+		E0A6ECBB55E4C64172CB6A0E /* libPods-homemore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-homemore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B7933F59EB061930B41BF8 /* Pods-homemore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homemore.release.xcconfig"; path = "Pods/Target Support Files/Pods-homemore/Pods-homemore.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE163DC11DBB38190034161A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8901CC5A9BA80EF097EE37D /* libPods-homemore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F45F9BA6C2EBB00BFAB938F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0A6ECBB55E4C64172CB6A0E /* libPods-homemore.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE163DBB1DBB38190034161A = {
+			isa = PBXGroup;
+			children = (
+				BE163DC61DBB38190034161A /* homemore */,
+				BE163DC51DBB38190034161A /* Products */,
+				FEB19A420FD8B62FACB33C7B /* Pods */,
+				5F45F9BA6C2EBB00BFAB938F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BE163DC51DBB38190034161A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE163DC41DBB38190034161A /* homemore.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE163DC61DBB38190034161A /* homemore */ = {
+			isa = PBXGroup;
+			children = (
+				BE189DB61DBBFE3B000ABBC7 /* Model */,
+				BE163DCA1DBB38190034161A /* AppDelegate.h */,
+				BE163DCB1DBB38190034161A /* AppDelegate.m */,
+				BE163DD01DBB38190034161A /* Main.storyboard */,
+				BE189DAD1DBBD845000ABBC7 /* StoryOverviewTableViewCell.h */,
+				BE189DAE1DBBD845000ABBC7 /* StoryOverviewTableViewCell.m */,
+				BE189DC01DBC2BF1000ABBC7 /* StoryDetailTableViewCell.h */,
+				BE189DC11DBC2BF1000ABBC7 /* StoryDetailTableViewCell.m */,
+				BE189DAA1DBBD319000ABBC7 /* StoryListViewController.h */,
+				BE189DAB1DBBD319000ABBC7 /* StoryListViewController.m */,
+				BE189DB01DBBE2AA000ABBC7 /* StoryDetailViewController.h */,
+				BE189DB11DBBE2AA000ABBC7 /* StoryDetailViewController.m */,
+				BE189DC31DBC5D7A000ABBC7 /* UtilFunctions.h */,
+				BE189DC41DBC5D7A000ABBC7 /* UtilFunctions.m */,
+				BE189DB31DBBFBE7000ABBC7 /* NetworkController.h */,
+				BE189DB41DBBFBE7000ABBC7 /* NetworkController.m */,
+				BE163DD61DBB38190034161A /* Assets.xcassets */,
+				BE163DD81DBB38190034161A /* LaunchScreen.storyboard */,
+				BE163DDB1DBB38190034161A /* Info.plist */,
+				BE163DD31DBB38190034161A /* homemore.xcdatamodeld */,
+				BE163DC71DBB38190034161A /* Supporting Files */,
+			);
+			path = homemore;
+			sourceTree = "<group>";
+		};
+		BE163DC71DBB38190034161A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE163DC81DBB38190034161A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE189DB61DBBFE3B000ABBC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE189DB71DBBFE5B000ABBC7 /* AtRisk.h */,
+				BE189DB81DBBFE5B000ABBC7 /* AtRisk.m */,
+				BE189DBA1DBBFE72000ABBC7 /* Story.h */,
+				BE189DBB1DBBFE72000ABBC7 /* Story.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FEB19A420FD8B62FACB33C7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C172709733FC58426377FEF0 /* Pods-homemore.debug.xcconfig */,
+				F7B7933F59EB061930B41BF8 /* Pods-homemore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE163DC31DBB38190034161A /* homemore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE163DDE1DBB38190034161A /* Build configuration list for PBXNativeTarget "homemore" */;
+			buildPhases = (
+				E2D6F44343A81CE3AECB655B /* Check Pods Manifest.lock */,
+				BE163DC01DBB38190034161A /* Sources */,
+				BE163DC11DBB38190034161A /* Frameworks */,
+				BE163DC21DBB38190034161A /* Resources */,
+				5417C875A4EFBC9283A8C14D /* Embed Pods Frameworks */,
+				736FBE94A871F6F29F980D30 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = homemore;
+			productName = homemore;
+			productReference = BE163DC41DBB38190034161A /* homemore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE163DBC1DBB38190034161A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = 1904Labs;
+				TargetAttributes = {
+					BE163DC31DBB38190034161A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4Y6K46GBGK;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BE163DBF1DBB38190034161A /* Build configuration list for PBXProject "homemore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE163DBB1DBB38190034161A;
+			productRefGroup = BE163DC51DBB38190034161A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE163DC31DBB38190034161A /* homemore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE163DC21DBB38190034161A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE163DDA1DBB38190034161A /* LaunchScreen.storyboard in Resources */,
+				BE163DD71DBB38190034161A /* Assets.xcassets in Resources */,
+				BE163DD21DBB38190034161A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5417C875A4EFBC9283A8C14D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-homemore/Pods-homemore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		736FBE94A871F6F29F980D30 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-homemore/Pods-homemore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2D6F44343A81CE3AECB655B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE163DC01DBB38190034161A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE163DD51DBB38190034161A /* homemore.xcdatamodeld in Sources */,
+				BE189DB91DBBFE5B000ABBC7 /* AtRisk.m in Sources */,
+				BE189DB21DBBE2AA000ABBC7 /* StoryDetailViewController.m in Sources */,
+				BE189DBC1DBBFE72000ABBC7 /* Story.m in Sources */,
+				BE189DAC1DBBD319000ABBC7 /* StoryListViewController.m in Sources */,
+				BE163DCC1DBB38190034161A /* AppDelegate.m in Sources */,
+				BE189DB51DBBFBE7000ABBC7 /* NetworkController.m in Sources */,
+				BE163DC91DBB38190034161A /* main.m in Sources */,
+				BE189DC51DBC5D7A000ABBC7 /* UtilFunctions.m in Sources */,
+				BE189DC21DBC2BF1000ABBC7 /* StoryDetailTableViewCell.m in Sources */,
+				BE189DAF1DBBD845000ABBC7 /* StoryOverviewTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE163DD01DBB38190034161A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE163DD11DBB38190034161A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE163DD81DBB38190034161A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE163DD91DBB38190034161A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE163DDC1DBB38190034161A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BE163DDD1DBB38190034161A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE163DDF1DBB38190034161A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C172709733FC58426377FEF0 /* Pods-homemore.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4Y6K46GBGK;
+				INFOPLIST_FILE = homemore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-904Labs.homemore";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BE163DE01DBB38190034161A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B7933F59EB061930B41BF8 /* Pods-homemore.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4Y6K46GBGK;
+				INFOPLIST_FILE = homemore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-904Labs.homemore";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE163DBF1DBB38190034161A /* Build configuration list for PBXProject "homemore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE163DDC1DBB38190034161A /* Debug */,
+				BE163DDD1DBB38190034161A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE163DDE1DBB38190034161A /* Build configuration list for PBXNativeTarget "homemore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE163DDF1DBB38190034161A /* Debug */,
+				BE163DE01DBB38190034161A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE163DD31DBB38190034161A /* homemore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE163DD41DBB38190034161A /* homemore.xcdatamodel */,
+			);
+			currentVersion = BE163DD41DBB38190034161A /* homemore.xcdatamodel */;
+			path = homemore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BE163DBC1DBB38190034161A /* Project object */;
+}
